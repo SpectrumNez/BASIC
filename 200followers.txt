@@ -1,0 +1,184 @@
+    1 REM Define Graphics
+    2 FOR n=1 TO 112
+    3 READ graphics
+    4 POKE USR "a"+(n-1), graphics
+    5 NEXT n
+    6 DATA 60,66,154,170,170,158,64,60,255,129,141,141,126,0,0,0,255,129,177,177,126,0,0,0,255,0,0,0,0,0,0,0,112,120,252,254,250,170,168,84,14,30,63,127,95,85,21,42,1,3,7,15,30,60,120,240,224,192,128,0,0,0,0,0,253,251,247,239,222,189,123,247,239,223,191,127,255,255,255,255,191,223,239,247,123,189,222,239,247,251,253,254,255,255,255,255,128,192,224,240,120,60,30,15,7,3,1,0,0,0,0,0,253,251,247,239,222,188,120,240,255,251,247,247,123,61,30,15
+    9 BORDER 2: PAPER 1: CLS 
+   10 PRINT INK 3;AT 2,15;"\.:\::\::\:."
+   15 PRINT INK 3;AT 3,15;"\::\::\::\::"
+   16 PRINT INK 0; PAPER 3;AT 3,15;"\d\b\b\d"
+   20 PRINT INK 0; PAPER 3;AT 4,15;"\: \..\..\ :"
+   21 PRINT INK 0;AT 5,15;"\::\::\::\::"
+   22 PRINT INK 3;AT 6,15;" \ :\: "
+   29 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+   30 PRINT INK 5;AT 7,14;"\::\::\::\::\::\::"
+   31 PRINT INK 5;AT 8,13;"\g\h\::\::\::\::\o"
+   32 PRINT INK 5;AT 9,12;"\g\h \::\::\::\i\h"
+   33 PRINT INK 5;AT 10,11;"\g\h  \::\::\i\j "
+   34 PRINT INK 5;AT 11,10;"\g\h   \::\i\j\:: "
+   35 PRINT INK 3;AT 12,10;"\e    "
+   36 PRINT INK 3; PAPER 5;AT 12,15;"\f"
+   40 PRINT INK 0;AT 13,15;"\::\::\::\::"
+   45 PRINT INK 0;AT 14,15;"\::\' \ '\::"
+   50 PRINT INK 0;AT 15,15;"\::  \::"
+   55 PRINT INK 0;AT 16,15;"\::  \::"
+   56 PRINT INK 0;AT 17,15;"\::  \::"
+   57 PRINT INK 0;AT 18,15;"\::  \::"
+   58 PRINT INK 0;AT 19,15;"\::  \::"
+   59 PRINT INK 0;AT 20,15;"\::  \::"
+   60 PRINT INK 7;AT 21,14;"\.:\::  \::\:."
+   61 REM 
+   62 LET c=2
+   63 LET r=21
+   79 PRINT INK 7;AT 0, 10;"\aSpectrumNez"
+   80 GO SUB 9500
+  139 REM Right Leg
+  140 PRINT INK 7;AT 20,18;"\::\:."
+  141 PRINT INK 1;AT 21,18;"\::\::"
+  142 PRINT INK 7;AT 19,18;"\::\:."
+  143 PRINT INK 1;AT 20,18;"\::\::"
+  144 PRINT INK 7;AT 18,18;"\::\:."
+  145 PRINT INK 1;AT 19,18;"\::\::"
+  146 PRINT INK 7;AT 19,18;"\::\:."
+  148 PRINT INK 0;AT 18,18;"\::\  "
+  149 PRINT INK 7;AT 20,18;"\::\:."
+  150 PRINT INK 0;AT 19,18;"\::\  "
+  151 PRINT INK 7;AT 21,18;"\::\:."
+  152 PRINT INK 0;AT 20,18;"\::\  "
+  159 REM Left Leg
+  160 PRINT INK 7;AT 20,14;"\.:\::"
+  161 PRINT INK 1;AT 21,14;"\::\::"
+  162 PRINT INK 7;AT 19,14;"\.:\::"
+  163 PRINT INK 1;AT 20,14;"\::\::"
+  164 PRINT INK 7;AT 18,14;"\.:\::"
+  165 PRINT INK 1;AT 19,14;"\::\::"
+  166 PRINT INK 7;AT 19,14;"\.:\::"
+  168 PRINT INK 0;AT 18,14;"\  \::"
+  169 PRINT INK 7;AT 20,14;"\.:\::"
+  170 PRINT INK 0;AT 19,14;"\  \::"
+  171 PRINT INK 7;AT 21,14;"\.:\::"
+  172 PRINT INK 0;AT 20,14;"\  \::"
+  178 GO SUB 9500
+  179 REM Arm 1
+  180 PRINT INK 5;AT 8,13;"\g\h\::\::\::\::\g"
+  181 PRINT INK 5;AT 9,12;"\g\h \::\::\::\i\h"
+  182 PRINT INK 5;AT 10,11;"\g\h  \::\::\i\j "
+  183 PRINT INK 5;AT 11,10;"\g\h   \::\i\j\:: "
+  184 PRINT INK 3;AT 12,10;"\e    "
+  185 PRINT INK 3; PAPER 5;AT 12,15;"\f"
+  186 PRINT INK 1;AT 12,19;"\::"
+  188 GO SUB 9500
+  189 REM Arm 2
+  190 PRINT INK 5;AT 8,13;" \: \::\::\::\::\ :"
+  191 PRINT INK 5;AT 9,12;"  \: \::\::\::\::\ :"
+  192 PRINT INK 5;AT 10,11;"   \: \::\::\::\::\ :"
+  193 PRINT INK 5;AT 11,10;"    \: \::\::\::\::\ :"
+  194 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+  195 PRINT INK 3;AT 12,09;"     \e"
+  196 PRINT INK 3;AT 12,19;"\f"
+  198 GO SUB 9500
+  199 REM Arm 3
+  200 PRINT INK 5;AT 8,14;"\m\::\::\::\::\n\m"
+  201 PRINT INK 5;AT 9,14;"\n\::\::\::\:: \n\m"
+  202 PRINT INK 5;AT 10,14;" \::\::\::\::  \n\m"
+  203 PRINT INK 5;AT 11,14;" \::\::\::\::   \n\m"
+  204 PRINT INK 3;AT 12,19;"    \f"
+  205 PRINT INK 3;AT 11,19;"\e"
+  206 PRINT INK 1;AT 12,14;"\::"
+  290 GO SUB 9500
+  299 REM Arm 4
+  300 PRINT INK 5;AT 8,13;" \: \::\::\::\::\ :  "
+  301 PRINT INK 5;AT 9,12;"  \: \::\::\::\::\ :  "
+  302 PRINT INK 5;AT 10,11;"   \: \::\::\::\::\ :   "
+  303 PRINT INK 5;AT 11,10;"    \: \::\::\::\::\ :     "
+  304 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+  305 PRINT INK 3;AT 12,09;"     \e"
+  306 PRINT INK 3;AT 12,19;"\f     "
+  397 PRINT INK 0; PAPER 3;AT 3,15;"\d\c\c\d"
+  398 GO SUB 9500
+  399 REM arm 5
+  400 PRINT INK 5;AT 8,13;"\g\h\::\::\::\::\g"
+  401 PRINT INK 5;AT 9,12;"\g\h \::\::\::\i\h"
+  402 PRINT INK 5;AT 10,11;"\g\h  \::\::\i\j "
+  403 PRINT INK 5;AT 11,10;"\g\h   \::\i\j\:: "
+  404 PRINT INK 3;AT 12,10;"\e    "
+  405 PRINT INK 3; PAPER 5;AT 12,15;"\f"
+  406 PRINT INK 1;AT 12,19;"\::"
+  409 GO SUB 9500
+  499 REM arm 6
+  500 PRINT INK 5;AT 8,13;" \: \::\::\::\::\ :  "
+  501 PRINT INK 5;AT 9,12;"  \: \::\::\::\::\ :  "
+  502 PRINT INK 5;AT 10,11;"   \: \::\::\::\::\ :   "
+  503 PRINT INK 5;AT 11,10;"    \: \::\::\::\::\ :     "
+  504 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+  505 PRINT INK 3;AT 12,09;"     \e"
+  506 PRINT INK 3;AT 12,19;"\f     "
+  599 GO SUB 9500
+  699 REM arm 7
+  700 PRINT INK 5;AT 8,14;"\m\::\::\::\::\n\m"
+  701 PRINT INK 5;AT 9,14;"\n\k\::\::\:: \n\m"
+  702 PRINT INK 5;AT 10,14;" \l\k\::\::  \n\m"
+  703 PRINT INK 5;AT 11,14;" \::\l\k\::   \n\m"
+  704 PRINT INK 3; PAPER 5;AT 12,18;"\e"
+  705 PRINT INK 3;AT 12,19;"    \f"
+  706 PRINT INK 1;AT 12,14;"\::"
+  798 GO SUB 9500
+  799 REM arm 8
+  800 PRINT INK 5;AT 8,13;" \: \::\::\::\::\ :  "
+  801 PRINT INK 5;AT 9,12;"  \: \::\::\::\::\ :  "
+  802 PRINT INK 5;AT 10,11;"   \: \::\::\::\::\ :   "
+  803 PRINT INK 5;AT 11,10;"    \: \::\::\::\::\ :     "
+  804 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+  805 PRINT INK 3;AT 12,09;"     \e"
+  806 PRINT INK 3;AT 12,19;"\f     "
+  897 PRINT INK 0; PAPER 3;AT 3,15;"\d\b\b\d"
+  898 GO SUB 9500
+  899 REM arm 9
+  900 PRINT INK 5;AT 8,13;"\g\h\::\::\::\::\g"
+  901 PRINT INK 5;AT 9,12;"\g\h \::\::\::\::\h"
+  902 PRINT INK 5;AT 10,11;"\g\h  \::\::\::\:: "
+  903 PRINT INK 5;AT 11,10;"\g\h   \::\::\::\:: "
+  904 PRINT INK 3;AT 12,10;"\e"
+  905 PRINT INK 3;AT 11,14;"\f"
+  906 PRINT INK 1;AT 12,19;"\::"
+  907 PRINT INK 1;AT 12,14;"\::"
+  918 GO SUB 9500
+  919 REM arm 10
+  920 PRINT INK 5;AT 8,13;" \: \::\::\::\::\ :  "
+  921 PRINT INK 5;AT 9,12;"  \: \::\::\::\::\ :  "
+  922 PRINT INK 5;AT 10,11;"   \: \::\::\::\::\ :   "
+  923 PRINT INK 5;AT 11,10;"    \: \::\::\::\::\ :     "
+  924 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+  925 PRINT INK 3;AT 12,09;"     \e"
+  926 PRINT INK 3;AT 12,19;"\f     "
+  928 GO SUB 9500
+  929 REM arm 11
+  930 PRINT INK 5;AT 8,14;"\m\::\::\::\::\n\m"
+  931 PRINT INK 5;AT 9,14;"\n\k\::\::\:: \n\m"
+  932 PRINT INK 5;AT 10,14;" \l\k\::\::  \n\m"
+  933 PRINT INK 5;AT 11,14;" \::\l\k\::   \n\m"
+  934 PRINT INK 3; PAPER 5;AT 12,18;"\e"
+  935 PRINT INK 3;AT 12,19;"    \f"
+  936 PRINT INK 1;AT 12,14;"\::"
+  938 GO SUB 9500
+  939 REM arm 12
+  940 PRINT INK 5;AT 8,13;" \: \::\::\::\::\ :  "
+  941 PRINT INK 5;AT 9,12;"  \: \::\::\::\::\ :  "
+  942 PRINT INK 5;AT 10,11;"   \: \::\::\::\::\ :   "
+  943 PRINT INK 5;AT 11,10;"    \: \::\::\::\::\ :     "
+  944 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+  945 PRINT INK 3;AT 12,09;"     \e"
+  946 PRINT INK 3;AT 12,19;"\f     "
+  950 GO TO 80
+ 9500 PRINT AT c,0; "200 followers!"
+ 9501 PRINT AT r,21; "Thank you!"
+ 9502 INK RND*7
+ 9503 BORDER RND*7
+ 9504 LET c=c+1
+ 9505 LET r=r-1
+ 9506 IF c=21 THEN LET c=2
+ 9507 IF r=1 THEN LET r=21
+ 9508 LET p=INT (RND*40) -30
+ 9509 BEEP 0.01,INT (RND*40)-30 +7
+ 9900 RETURN 

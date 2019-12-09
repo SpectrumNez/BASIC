@@ -1,0 +1,7 @@
+    5 LET c=0
+   10 PRINT "@SpectrumNez has 20 followers!"
+   15 PAPER 1 + (RND*6)
+   20 INK c
+   30 LET c=c+1
+   35 IF c=8 THEN LET c=0
+   40 GO TO 10

@@ -1,0 +1,27 @@
+    1 LET y=(RND*30): LET s=(RND*30): LET t=(RND*30): LET u=(RND*30): LET v=(RND*30): LET w=(RND*30): LET x=(RND*30):
+    2 LET a=0: LET b=3: LET c=7: LET d=9: LET e=12: LET f=15: LET g=17
+    3 REM Define Grahics
+    4 FOR n=1 TO 64
+    5 READ graph
+    6 POKE USR "a"+(n-1),graph
+    7 NEXT n
+    8 DATA 0,16,84,56,238,56,84,16,0,56,84,146,238,146,84,56,0,40,84,186,108,186,84,40,16,108,84,186,84,108,16,0,56,16,186,238,186,16,56,0,68,170,108,16,108,170,68,0,24,90,36,219,219,36,90,24,0,0,0,0,0,126,129,0
+    9 BORDER 0: PAPER 0: INK 7: CLS 
+   20 IF y>=30 THEN PRINT AT a-1,30;"  ": LET y=0
+   21 IF s>=30 THEN PRINT AT b-1,30;"  ": LET s=0
+   22 IF t>=30 THEN PRINT AT c-1,30;"  ": LET t=0
+   23 IF u>=30 THEN PRINT AT d-1,30;"  ": LET u=0
+   24 IF v>=30 THEN PRINT AT e-1,30;"  ": LET v=0
+   25 IF w>=30 THEN PRINT AT f-1,30;"  ": LET w=0
+   26 IF x>=30 THEN PRINT AT g-1,30;"  ": LET x=0
+   31 LET y=y+(RND*1): LET s=s+(RND*1): LET t=t+(RND*1): LET u=u+(RND*1): LET v=v+(RND*1): LET w=w+(RND*1): LET x=x+(RND*1)
+   40 PRINT AT a,y;"\a": PRINT AT b,s;"\b": PRINT AT c,t;"\c": PRINT AT d,u;"\d": PRINT AT e,v;"\e": PRINT AT f,w;"\f": PRINT AT g,x;"\g"
+   50 PRINT AT a-1,y-1;"  ";AT b-1,s-1;"  ";AT c-1,t-1;"  ";AT d-1,u-1;"  ";AT e-1,v-1;"  ";AT f-1,w-1;"  ";AT g-1,x-1;"  "
+   60 LET a=a+1: IF a=21 THEN PRINT AT 20,y;" ";AT 21,y;"\h": LET a=a-21
+   70 LET b=b+1: IF b=21 THEN PRINT AT 20,s;" ";AT 21,s;"\h": LET b=b-21
+   80 LET c=c+1: IF c=21 THEN PRINT AT 20,t;" ";AT 21,t;"\h": LET c=c-21
+   90 LET d=d+1: IF d=21 THEN PRINT AT 20,u;" ";AT 21,u;"\h": LET d=d-21
+  100 LET e=e+1: IF e=21 THEN PRINT AT 20,v;" ";AT 21,v;"\h": LET e=e-21
+  110 LET f=f+1: IF f=21 THEN PRINT AT 20,w;" ";AT 21,w;"\h": LET f=f-21
+  120 LET g=g+1: IF g=21 THEN PRINT AT 20,x;" ";AT 21,x;"\h": LET g=g-21
+  740 GO TO 20

@@ -1,0 +1,46 @@
+    1 BORDER 1: PAPER 1: INK 4: CLS 
+    2 LET a=1: LET b=48: LET i=2
+    3 FOR n=1 TO 16
+    4 READ graph
+    5 POKE USR "a"+(n-1),graph
+    6 NEXT n
+    7 DATA 13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0
+   10 PLOT 20,170
+   20 DRAW 50,0: DRAW 0,-20: DRAW -20,-20: DRAW -30,-50,-4: DRAW 0,20: DRAW 20,20,4.5: DRAW 0,15: DRAW 20,20: DRAW -40,0: DRAW 0,15
+   30 CIRCLE 110,145,25
+   35 CIRCLE 110,145,7
+   40 CIRCLE 165,145,25
+   45 CIRCLE 165,145,7
+   49 LET x=12
+   50 LET x$="FOLLOWERS!"
+   60 FOR l =1 TO 10
+   70 PRINT AT 10,x; INK i; FLASH 1;x$(l)
+   80 LET x=x+1: LET i=i+1
+   81 FOR p=a TO b STEP 4
+   82 BEEP .01,p: BEEP .01,p-6
+   83 NEXT p
+   84 LET a=a+1: LET b=b+1
+   85 IF i=8 THEN LET i=2
+   90 NEXT l
+   91 LET y$="Thank you to every follower!": LET x=0
+   92 FOR l=1 TO 28
+   93 PRINT AT 16,x; INK i;y$(l)
+   94 LET x=x+1: LET i=i+1
+   95 BEEP 0.1,(RND*48)
+   96 IF i=9 THEN LET i=2
+   97 NEXT l
+  100 PRINT AT 18,15; INK 5;"\a \b"
+  110 LET z$="SpectrumNez": LET x=18
+  115 LET i=2
+  120 FOR l=1 TO 11
+  130 PRINT AT 18,x; INK i;z$(l)
+  140 LET x=x+1: LET i=i+1
+  160 IF i=7 THEN LET i=4
+  170 IF i=5 THEN LET i=5
+  180 IF i=6 THEN LET i=2
+  181 IF i=3 THEN LET i=6
+  182 FOR r=12 TO 36 STEP 6
+  183 BEEP .01,r: BEEP .01,24-r
+  184 NEXT r
+  190 NEXT l
+  200 PAUSE 0

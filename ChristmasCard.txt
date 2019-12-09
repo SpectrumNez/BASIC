@@ -1,0 +1,83 @@
+    1 LET y=(RND*30): LET s=(RND*30): LET t=(RND*30): LET u=(RND*30): LET v=(RND*30): LET w=(RND*30): LET x=(RND*30): LET n=(RND*30): LET o=(RND*30): LET p=(RND*30): LET q=(RND*30): LET r=(RND*30)
+    2 LET a=0: LET b=3: LET c=7: LET d=9: LET e=12: LET f=15: LET g=17: LET h=5: LET i=14: LET j=13: LET k=1: LET l=16: LET m=0: LET z=1
+    3 FOR n=1 TO 88
+    4 READ graph
+    5 POKE USR "a"+(n-1),graph
+    6 NEXT n
+    7 DATA 0,16,84,56,238,56,84,16,0,56,84,146,238,146,84,56,0,40,84,186,108,186,84,40,16,108,84,186,84,108,16,0,56,16,186,238,186,16,56,0,68,170,108,16,108,170,68,0,24,90,36,219,219,36,90,24,0,0,0,0,0,126,255,255,13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0,24,60,86,106,86,106,52,24
+    8 BORDER 0: PAPER 0: INK 7: CLS : GO TO 19
+    9 BORDER 7: PAPER 7: INK 0: CLS 
+   10 FOR b=0 TO 5 STEP 2: PLOT 0,b: DRAW 255,0: NEXT b: CIRCLE 195,45,40: CIRCLE 205,105,20: CIRCLE 200,110,5: CIRCLE 210,107,4: CIRCLE 190,102,2: CIRCLE 195,95,2: CIRCLE 200,92,2: CIRCLE 207,93,2: CIRCLE 215,97,2: CIRCLE 192,20,2: CIRCLE 190,35,2: CIRCLE 186,50,2: CIRCLE 190,60,2: CIRCLE 195,73,2
+   11 PLOT 180,97: DRAW 20,5: DRAW 3,-5,-2: DRAW -22,0: PLOT 180,130: DRAW 60,-5,0.2: PLOT 200,128: DRAW 2,25: DRAW 30,-2,-0.4: DRAW -7,-25
+   12 PLOT 158,60: DRAW -20,5: DRAW -10,12: PLOT 138,65: DRAW -14,1: PLOT 138,65: DRAW -10,-12
+   13 PLOT 220,60: DRAW 20,5: DRAW 10,12: PLOT 240,65: DRAW 14,1: PLOT 240,65: DRAW 10,-12
+   14 PRINT AT 1,1; PAPER 0;"                   ";AT 2,1; PAPER 0;"     ";AT 2,6; INK 7;"H A P P Y";AT 2,15;"     ";AT 3,1;"                   "
+   15 PRINT AT 4,1; PAPER 0;" ";AT 4,2; INK 4;"C H R I S T M A S!";AT 4,19;" ";AT 5,1;"                   "
+   16 PRINT AT 6,1; PAPER 0;"              ";AT 6,14; INK 3;"2019!";AT 6,19;" "
+   17 PRINT AT 7,1; PAPER 0; INK 6;"  FROM             ";AT 8,1;"                   "
+   18 PRINT AT 9,1; PAPER 0; INK 5;"  \i \jSpectrumNez   ";AT 10,1;"                   ": GO SUB 400: GO TO 300
+   19 IF m=35 THEN GO TO 9
+   20 IF y>=30 THEN PRINT AT a-1,30;"  ": LET y=0
+   21 IF s>=30 THEN PRINT AT b-1,30;"  ": LET s=0
+   22 IF t>=30 THEN PRINT AT c-1,30;"  ": LET t=0
+   23 IF u>=30 THEN PRINT AT d-1,30;"  ": LET u=0
+   24 IF v>=30 THEN PRINT AT e-1,30;"  ": LET v=0
+   25 IF w>=30 THEN PRINT AT f-1,30;"  ": LET w=0
+   26 IF x>=30 THEN PRINT AT g-1,30;"  ": LET x=0
+   27 IF n>=30 THEN PRINT AT h-1,30;"  ": LET n=0
+   28 IF o>=30 THEN PRINT AT i-1,30;"  ": LET o=0
+   29 IF p>=30 THEN PRINT AT j-1,30;"  ": LET p=0
+   30 IF q>=30 THEN PRINT AT k-1,30;"  ": LET q=0
+   31 IF r>=30 THEN PRINT AT l-1,0;"  ": LET r=0
+   32 LET y=y+(RND*1): LET s=s+(RND*1): LET t=t+(RND*1): LET u=u+(RND*1): LET v=v+(RND*1): LET w=w+(RND*1): LET x=x+(RND*1): LET n=n+(RND*1): LET o=o+(RND*1): LET p=p+(RND*1): LET q=q+(RND*1): LET r=r+(RND*1)
+   40 PRINT AT a,y; INK 7;"\a";AT b,s;"\b";AT c,t; OVER 1;"\c";AT d,u; OVER 1;"\d";AT e,v; OVER 1;"\e";AT f,w; OVER 1;"\f";AT g,x; OVER 1;"\g";AT h,n; OVER 1;".";AT i,o; OVER 1;".";AT j,p; OVER 1;".";AT k,q; OVER 1;".";AT l,r; OVER 1;"."
+   50 PRINT AT a-1,y-1;"  ";AT b-1,s-1;"  ";AT c-1,t-1;"  ";AT d-1,u-1;"  ";AT e-1,v-1;"  ";AT f-1,w-1;"  ";AT g-1,x-1;"  ";AT h-1,n-1;"  ";AT i-1,o-1;"  ";AT j-1,p-1;"  ";AT k-1,q-1;"  ";AT l-1,r-1;"  "
+   60 INK 7: LET a=a+1: IF a=19 THEN PRINT AT 18,y;" ";AT 19,y;"\h": LET a=a-19
+   70 LET b=b+1: IF b=19 THEN PRINT AT 18,s;" ";AT 19,s;"\h": LET b=b-19
+   80 LET c=c+1: IF c=19 THEN PRINT AT 18,t;" ";AT 19,t;"\h": LET c=c-19
+   90 LET d=d+1: IF d=19 THEN PRINT AT 18,u;" ";AT 19,u;"\h": LET d=d-19
+  100 LET e=e+1: IF e=19 THEN PRINT AT 18,v;" ";AT 19,v;"\h": LET e=e-19
+  110 LET f=f+1: IF f=19 THEN PRINT AT 18,w;" ";AT 19,w;"\h": LET f=f-19
+  120 LET g=g+1: IF g=19 THEN PRINT AT 18,x;" ";AT 19,x;"\h": LET g=g-19
+  130 LET h=h+1: IF h=19 THEN PRINT AT 18,n;" ";AT 19,n;"\h": LET h=h-19
+  140 LET i=i+1: IF i=19 THEN PRINT AT 18,o;" ";AT 19,o;"\h": LET i=i-19
+  150 LET j=j+1: IF j=19 THEN PRINT AT 18,p;" ";AT 19,p;"\h": LET j=j-19
+  160 LET k=k+1: IF k=19 THEN PRINT AT 18,q;" ";AT 19,q;"\h": LET k=k-19
+  170 LET l=l+1: IF l=19 THEN PRINT AT 18,r;" ";AT 19,r;"\h": LET l=l-19
+  200 LET z$="The snow falls. The fun begins!"
+  210 LET m=m+1: LET z=z+1
+  215 INK z
+  220 IF m<=31 THEN PRINT AT 21,m; z$(m)
+  225 IF z=6 THEN LET z=1
+  230 GO TO 19
+  300 BEEP 0.5,12: BEEP 0.5,17: BEEP 0.2,17: BEEP 0.2,19: BEEP 0.21,17: BEEP 0.21,16: BEEP 0.5,14: BEEP 0.5,14
+  310 BEEP 0.5,14: BEEP 0.5,19: BEEP 0.2,19: BEEP 0.2,21: BEEP 0.21,19: BEEP 0.21,17: BEEP 0.5,16: BEEP 0.5,12
+  320 BEEP 0.5,12: BEEP 0.5,21: BEEP 0.2,21: BEEP 0.2,22: BEEP 0.21,21: BEEP 0.21,19: BEEP 0.5,17: BEEP 0.5,14
+  330 BEEP 0.2,12: BEEP 0.2,12: BEEP 0.5,14: BEEP 0.5,19: BEEP 0.5,16: BEEP 1,17
+  340 BEEP 0.5,12: BEEP 0.5,17: BEEP 0.5,17: BEEP 0.5,17: BEEP 1,16: BEEP 0.5,16: BEEP 0.5,17: BEEP 0.5,16: BEEP 0.5,14: BEEP 1,12
+  350 BEEP 0.5,19: BEEP 0.5,21: BEEP 0.2,19: BEEP 0.2,19: BEEP 0.21,17: BEEP 0.21,17: BEEP 0.5,24: BEEP 0.5,12
+  360 BEEP 0.2,12: BEEP 0.2,12: BEEP 0.5,14: BEEP 0.5,19: BEEP 0.5,16: BEEP 1,17
+  390 PAUSE 0
+  400 REM border
+  405 LET i=0: PAPER 0
+  410 FOR z= 0 TO 20
+  420 LET i=i+1
+  450 PRINT AT 0,z; INK i; FLASH 1;"\k"
+  460 IF i=7 THEN LET i=0
+  470 NEXT z
+  480 FOR z=1 TO 11
+  490 LET i=i+1
+  500 PRINT AT z,20; INK i; FLASH 1;"\k"
+  510 IF i=7 THEN LET i=0
+  519 NEXT z
+  520 FOR z= 19 TO 0 STEP -1
+  530 LET i=i+1
+  550 PRINT AT 11,z; INK i; FLASH 1;"\k"
+  560 IF i=7 THEN LET i=0
+  570 NEXT z
+  580 FOR z=10 TO 1 STEP -1
+  590 LET i=i+1
+  600 PRINT AT z,0; INK i; FLASH 1;"\k"
+  610 IF i=7 THEN LET i=0
+  619 NEXT z
+  620 RETURN 

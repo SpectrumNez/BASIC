@@ -1,0 +1,41 @@
+    5 BORDER 2: PAPER 1: CLS 
+   10 PRINT INK 3;AT 2,15;"\.:\::\::\:."
+   15 PRINT INK 3;AT 3,15;"\::\::\::\::"
+   16 PRINT INK 0; PAPER 3;AT 3,16;"\ .\ ."
+   20 PRINT INK 0; PAPER 3;AT 4,15;"\: \..\..\ :"
+   21 PRINT INK 0;AT 5,15;"\::\::\::\::"
+   22 PRINT INK 3;AT 6,15;" \ :\: "
+   30 PRINT INK 5;AT 7,14;"\::\::\::\::\::\::"
+   31 PRINT INK 5;AT 8,14;"\: \::\::\::\::\ :"
+   32 PRINT INK 5;AT 9,14;"\: \::\::\::\::\ :"
+   33 PRINT INK 3; PAPER 5;AT 9,17;"\: "
+   34 PRINT INK 5;AT 10,14;"\:.\..\..\::\::\ :"
+   35 PRINT INK 3;AT 10, 17;"\::"
+   36 PRINT INK 5;AT 11,15;"\::\::\::\::\ :"
+   37 PRINT INK 6; PAPER 5;AT 12,15;"\..\..\..\.."
+   38 PRINT INK 5;AT 12,19;"\ :"
+   40 PRINT INK 0;AT 13,15;"\::\::\::\::"
+   41 PRINT INK 3;AT 13,19;"\ :\: "
+   45 PRINT INK 0;AT 14,15;"\::\' \ '\::"
+   50 PRINT INK 0;AT 15,15;"\::  \::"
+   55 PRINT INK 0;AT 16,15;"\::  \::"
+   56 PRINT INK 0;AT 17,15;"\::  \::"
+   57 PRINT INK 0;AT 18,15;"\::  \::"
+   58 PRINT INK 0;AT 19,15;"\::  \::"
+   59 PRINT INK 0;AT 20,15;"\::  \::"
+   60 PRINT INK 7;AT 21,14;"\.:\::  \::\:."
+   61 REM 
+   70 LET c=2
+   71 LET r=21
+   79 PRINT AT 0, 10;"@SpectrumNez"
+   80 PRINT AT c,0; "60 followers!"
+   81 PRINT AT r,21; "Thank you!"
+   90 INK RND*7
+   91 BORDER RND*7
+  100 LET c=c+1
+  101 LET r=r-1
+  109 IF c=21 THEN LET c=2
+  110 IF r=1 THEN LET r=21
+  120 LET p=INT (RND*40) -30
+  130 BEEP 0.01,p: BEEP 0.01,p+7: BEEP 0.01,p+4
+  200 GO TO 79

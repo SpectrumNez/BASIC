@@ -1,0 +1,126 @@
+    1 LET m=0: LET t=1.5: LET z=1: PAPER 0: INK 7: CLS 
+    2 FOR n=1 TO 144
+    3 READ graph
+    4 POKE USR "a"+(n-1),graph
+    5 NEXT n
+    6 DATA 1,1,9,7,3,127,3,7, 0,0,32,192,128,252,128,192, 9,17,1,1,1,1,1,1, 32,16,0,0,0,0,0,0,3,4,7,9,19,21,20,9, 128,192,64,128,0,138,196,46, 56,120,176,191,48,80,80,72, 255,255,115,224,96,160,160,144,0,0,0,0,0,0,0,1, 0,56,68,124,149,157,153,177, 3,134,72,48,0,0,0,0, 242,158,146,146,148,164,228,244,0,56,68,124,148,156,152,176, 0,0,0,28,30,18,19,15, 240,144,144,145,147,147,146,242, 7,11,139,71,229,229,37,39,13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0
+   11 LET z$="Luke 2:1-3": LET a$="\: It came to pass in those    \ :": LET b$="\: days that the world should  \ :": LET c$="\: be taxed. And all went to be\ :": LET d$="\: taxed, every one into his   \ :": LET e$="\: own city.                   \ :"
+   12 FOR b=0 TO 14: PRINT AT b,0; PAPER 5; BRIGHT z;"                                ": NEXT b: PRINT AT b,0; PAPER 5; BRIGHT z; OVER 1;"                                "
+   15 PRINT AT 1,1; PAPER 7; INK 0;"\:'\''\''\''\''\''\''\''\''\''\''\':";AT 2,1; PAPER 7; INK 0;"\: ";z$;"\ :";AT 3,1; PAPER 7; INK 0;"\:.\..\..\..\..\..\..\..\..\..\..\.:";AT 3,13; PAPER 7; INK 0;"\''\''\''\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+   16 FOR a=1 TO 30: PRINT AT 4,a; PAPER 7; INK 0;a$(a): PAUSE t: NEXT a
+   19 FOR a=1 TO 30: PRINT AT 5,a; PAPER 7; INK 0;b$(a): PAUSE t: NEXT a
+   22 FOR a=1 TO 30: PRINT AT 6,a; PAPER 7; INK 0;c$(a): PAUSE t: NEXT a
+   25 FOR a=1 TO 30: PRINT AT 7,a; PAPER 7; INK 0;d$(a): PAUSE t: NEXT a
+   28 FOR a=1 TO 30: PRINT AT 8,a; PAPER 7; INK 0;e$(a): PAUSE t
+   29 NEXT a
+   30 PRINT AT 9,1; PAPER 7; INK 0;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+   31 IF m=9 THEN GO TO 330
+   32 IF m=16 THEN GO TO 330
+   33 IF m=26 THEN GO TO 510
+   34 IF m=27 THEN GO TO 609
+   35 IF m=23 THEN GO TO 510
+   36 IF m=29 THEN GO TO 940
+   98 GO TO 400
+   99 LET z=1: FOR b=0 TO 14: PRINT AT b,0; PAPER 1; BRIGHT z;"                                ": NEXT b: PRINT AT b,0; PAPER 1; BRIGHT z; OVER 1;"                                "
+  100 LET z$="Luke 2:6  ": LET a$="\: And so it was, that, while  \ :": LET b$="\: they were there, the days   \ :": LET c$="\: were accomplished that she  \ :": LET d$="\: should be delivered         \ :": LET e$="\:                             \ :": GO TO 15
+  150 REM PLOT 0,49: DRAW 255,0: PLOT 230,47: DRAW 25,0
+  155 GO TO 15
+  156 FOR b=0 TO 14: PRINT AT b,0; PAPER 1;"                                ": NEXT b: PRINT AT b,0; PAPER 1; OVER 1;"                                "
+  158 LET z$="Luke 2:4-5": LET a$="\: Joseph also went to         \ :": LET b$="\: Bethlehem to be taxed with  \ :": LET c$="\: Mary his wife, being great  \ :": LET d$="\: with child.                 \ :": LET e$="\:                             \ :": LET z=0: GO TO 12
+  198 IF m=9 THEN GO TO 330
+  199 FOR b=0 TO 17
+  200 PRINT AT b,0; PAPER 0; OVER 1;"                                "
+  210 NEXT b
+  215 GO TO 100
+  300 LET m=2: FOR c=0 TO 20
+  310 PRINT AT 19,m; "\e\f\i\j": PRINT AT 20,m;"\g\h\k\l"
+  315 PRINT AT 19,m-2;"  ": PRINT AT 20,m-2;"  "
+  320 LET m=m+1
+  321 BEEP 0.01,-12
+  325 PAUSE 15
+  326 IF m=9 THEN GO TO 158
+  327 IF m=16 THEN GO TO 99
+  330 NEXT c
+  340 PRINT AT 19,m; "    ": PRINT AT 20,m;"    "
+  341 PRINT AT 19,m-2;"  ": PRINT AT 20,m-2;"  "
+  400 PLOT 0,47: DRAW 170,0: PLOT 230,47: DRAW 25,0: PLOT 170,49: DRAW 60,0: PLOT 170,48: DRAW 60,0: PLOT 170,10: DRAW 0,40: DRAW 60,0: DRAW 0,-10: DRAW -24,-10: DRAW 0,-3: DRAW 24,10: DRAW 24,-10: DRAW 0,3: DRAW -24,10: PLOT 170,10: DRAW 45,0: PLOT 215,30: DRAW 0,-20: DRAW 30,0: DRAW 0,20: PLOT 222,10: DRAW 0,10: DRAW 15,0,-3: DRAW 0,-9: PLOT 180,10: DRAW 0,10: DRAW 14,0,-3: DRAW 0,-9: PLOT 187,10: DRAW 0,16: PLOT 194,34: DRAW 0,7: DRAW 9,0: DRAW 0,-7: DRAW -9,0
+  440 IF m=23 THEN GO TO 500
+  450 GO TO 300
+  500 LET z$="Luke 2:7  ": LET a$="\: And she brought forth her   \ :": LET b$="\: firstborn son wrapped him in\ :": LET c$="\: swaddling clothes and laid  \ :": LET d$="\: him in a manger, because    \ :": LET e$="\: there was no room in the inn\ :": LET z=0
+  501 FOR b=0 TO 14: PRINT AT b,0; PAPER 1; BRIGHT z;"                                ": NEXT b: PRINT AT b,0; PAPER 1; BRIGHT z; OVER 1;"                                ": GO TO 15
+  502 LET z$="Luke 2:11 ": LET a$="\: For unto you is born        \ :": LET b$="\: this day in the city of     \ :": LET c$="\: David a Saviour, which is   \ :": LET d$="\: Christ the Lord.            \ :": LET e$="\:                             \ :": LET z=0: LET m=29: GO TO 15
+  510 PAPER 1: PRINT AT 14,27;"\\|/"
+  511 BEEP 0.2,40: BEEP 0.01,39: BEEP 0.01,38: BEEP 0.01,37: BEEP 0.01,36
+  512 PRINT AT 14,27;"   ": PLOT 240,47: DRAW 10,0: PAUSE 30
+  513 PRINT AT 14,27;"\\|/"
+  514 BEEP 0.2,40: BEEP 0.01,39: BEEP 0.01,38: BEEP 0.01,37: BEEP 0.01,36
+  515 PRINT AT 14,27;"   ": PLOT 240,47: DRAW 10,0: PAUSE 30
+  516 PRINT AT 14,27;"\\|/"
+  517 BEEP 0.2,40: BEEP 0.01,39: BEEP 0.01,38: BEEP 0.01,37: BEEP 0.01,36
+  518 PRINT AT 14,27;"   ": PLOT 240,47: DRAW 10,0: PAUSE 30
+  519 LET z$="Matt 2:1-3": LET a$="\: Wise men came from the east \ :": LET b$="\: saying, Where is he that is \ :": LET c$="\: born King of the Jews? for  \ :": LET d$="\: we have seen his star and   \ :": LET e$="\: are come to worship him.    \ :": LET z=0: LET m=27
+  520 PAUSE 20: FOR b=0 TO 14: PRINT AT b,0; PAPER 1;"                                ": NEXT b: PRINT AT b,0; PAPER 1; OVER 1;"                                "
+  521 GO TO 15
+  530 PLOT 0,47: DRAW 170,0: PLOT 230,47: DRAW 25,0
+  609 PAUSE 100: FOR b=0 TO 14: PRINT AT b,0; PAPER 0;"                                ": NEXT b: PRINT AT b,0; PAPER 0; OVER 1;"                                "
+  610 PAPER 0: FOR d=1 TO 28: PRINT AT 0,d; BRIGHT 1;"\a\b";AT 1,d; BRIGHT 1;"\c\d": PRINT AT 0,d-2;"  ";AT 1,d-2;"  ": PAUSE 2: NEXT d
+  611 FOR s=1 TO 50: PLOT (RND*255),(RND*125+50): NEXT s
+  612 INK 6: FOR x=-15 TO 15 STEP 3
+  613 PLOT 231,160
+  614 DRAW x,-120: BEEP 0.02,x
+  615 NEXT x: INK 7
+  620 LET m=2: FOR c=0 TO 20
+  630 PAPER 0: PRINT AT 19,m; "\j \j \j": PRINT AT 20,m;"\l \l \l"
+  640 PRINT AT 19,m-2;"  ": PRINT AT 20,m-2;"  "
+  650 LET m=m+1
+  660 PAUSE 10 : BEEP 0.01,-12
+  670 NEXT c
+  680 FOR b=0 TO 20: PRINT AT b,0; PAPER 0;"                                ": NEXT b
+  720 INK 6
+  730 PAPER 1
+  740 CLS 
+  750 LET z= 10
+  760 FOR x=0 TO 174 STEP z
+  770 PLOT 128,0
+  780 DRAW -128,x
+  790 BEEP .001,x/3
+  800 NEXT x
+  810 FOR x=-127 TO 127 STEP z
+  820 PLOT 128,0
+  830 DRAW x,175
+  840 BEEP .001,60
+  850 NEXT x
+  860 FOR x=174 TO 0 STEP -z
+  870 PLOT 128,0
+  880 DRAW 127,x
+  890 BEEP .001,x/3
+  900 NEXT x
+  910 PRINT AT 20,15; PAPER 6; INK 0;"\m\n";AT 21,15; PAPER 6; INK 0;"\o\p"
+  920 BEEP 0.7,12: BEEP 0.2,7: BEEP 0.2,9: BEEP 0.4,7: PAUSE 10
+  921 BEEP 0.7,12: BEEP 0.2,7: BEEP 0.2,9: BEEP 0.2,7: PAUSE 10
+  922 BEEP 0.1,7: BEEP 0.1,7: BEEP 0.2,9: BEEP 0.2,7: PAUSE 10
+  923 BEEP 0.1,7: BEEP 0.1,7: BEEP 0.2,9: BEEP 0.2,7: PAUSE 10
+  924 BEEP 0.2,7: BEEP 0.2,9: BEEP 0.4,12: BEEP 0.2,11: BEEP 0.6,12: PAUSE 10
+  925 PAUSE 30
+  930 GO TO 502
+  940 PAPER 0: PRINT AT 11,15; INK 0;"\:'\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+  941 PRINT AT 12,15; INK 0;"\:               \ :"
+  942 PRINT AT 13,15; INK 0;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+  949 PRINT AT 12,16; INK 5;"\q \r"
+  950 LET z$="SpectrumNez": LET x=19
+  960 LET i=2
+  970 FOR l=1 TO 11
+  980 PRINT AT 12,x; INK i;z$(l)
+  981 LET x=x+1: LET i=i+1
+  982 IF i=7 THEN LET i=4
+  983 IF i=5 THEN LET i=5
+  984 IF i=6 THEN LET i=2
+  985 IF i=3 THEN LET i=6
+  986 NEXT l
+ 1000 LET a=0.45: LET b=1.3: LET p=6
+ 1001 BEEP a,-3: BEEP a,0: BEEP a,4: BEEP a,4: BEEP a,4: BEEP a,2: BEEP a,5: BEEP a,4: BEEP a,2: BEEP b,0: PAUSE p
+ 1002 BEEP a,2: BEEP a,4: BEEP a,0: BEEP a,-3: BEEP a,0: BEEP a,2: BEEP a,-1: BEEP a,-3: BEEP a,-5: BEEP b,-3: PAUSE p
+ 1003 BEEP a,2: BEEP a,2: BEEP a,-3: BEEP a,-3: BEEP a,-1: BEEP b,0: BEEP a,-1: BEEP a,-3: BEEP b,-5: PAUSE p
+ 1004 BEEP a,0: BEEP a,2: BEEP a,4: BEEP a,4: BEEP a,4: BEEP a,2: BEEP a,5: BEEP a,4: BEEP a,2: BEEP b,0: PAUSE p
+ 1005 BEEP a,7: BEEP b,7: BEEP a,4: BEEP b,4: BEEP a,4: BEEP a,2: BEEP a,5: BEEP a,4: BEEP a,2: BEEP b,0: PAUSE p
+ 1006 BEEP a,2: BEEP a,4: BEEP a,0: BEEP a,-3: BEEP a,0: BEEP a,2: BEEP a,-1: BEEP a,-3: BEEP a,-5: BEEP b,-3: PAUSE 0

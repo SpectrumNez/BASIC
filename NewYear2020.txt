@@ -1,0 +1,122 @@
+    1 LET e=0
+   10 BORDER 1: PAPER 1: INK 7: CLS 
+   50 FOR n=1 TO 120
+   60 READ graph
+   70 POKE USR "a"+(n-1),graph
+   80 NEXT n
+   90 DATA 7,8,18,16,19,24,7,8,224,16,136,40,200,16,224,16,9,108,147,127,7,6,6,14,80,246,9,254,224,96,96,112,7,8,17,20,19,8,7,8,224,16,72,8,200,16,224,16,105,156,127,4,7,6,6,14,246,9,254,32,224,96,96,112,15,30,49,52,51,120,63,8,240,56,88,12,205,30,236,16,15,24,50,48,179,120,63,8,240,120,152,44,204,30,236,16,16,56,124,124,40,56,40,56,13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0
+   98 GO SUB 1000
+   99 GO SUB 2500
+  100 LET a$="O5aO6N6d3$d5d#f6e3d5e3#f3e6d3d5#f5a8b"
+  101 LET b$="O4aO4N6d3$d5d#f6e3d5e3#f3e6d3d5#f5a8b"
+  102 LET c$="O3&7dO2N7b7aO3N7$d7d7#f8g"
+  103 PLAY a$,b$,c$: GO SUB 3050
+  104 LET a$="O6bO6N6a3#f5#fd6e3d5e3#f3e6dO4N3B5B5AO5N8D"
+  105 LET b$="O4bO4N6a3#f5#fd6e3d5e3#f3e6dO2N3B5B5AO3N8D"
+  106 LET c$="O3&O3N7dO2N7b7a7$b7b5g5aO3N8d"
+  107 PLAY a$,b$,c$: GO SUB 3000
+  108 LET a$="O6Nb6a3#f5#fd6e3d5eb"
+  109 LET b$="O4Nb6a3#f5#fd6e3d5eb"
+  110 LET c$="O3&O3N7d7dO2N7aO3N7$d"
+  111 PLAY a$,b$,c$
+  112 LET a$="O6N6a3#f5#fa8b"
+  113 LET b$="O4N6a3#f5#fa8b"
+  114 LET c$="O2N7D7#F8G"
+  115 PLAY a$,b$,c$: GO SUB 3050
+  116 LET a$="O6bO6N6a3#f5#fd6e3d5e3#f3e6dO4N3B5B5AO5N8D"
+  117 LET b$="O4bO4N6a3#f5#fd6e3d5e3#f3e6dO2N3B5B5AO3N8D"
+  118 LET c$="O3&O3N7dO2N7b7a7$b7b5g5aO3N8d"
+  119 PLAY a$,b$,c$
+  120 LET e=1
+  127 GO SUB 2500
+  128 BORDER 0: PAPER 0: INK 7: CLS 
+  129 GO TO 4080
+  131 GO SUB 3050
+  132 GO TO 99
+  150 GO SUB 3000
+ 1000 LET l=0.005: LET r=25: PRINT AT 2,4; INK 2;"\::  \:: \::\::\::\:: \::\::\::\:: \::\::\::\:: \::  \::": BEEP l,r: LET r=r-1
+ 1010 PRINT AT 3,4; INK 3;"\::  \:: \::  \:: \::  \:: \::  \:: \::  \::": BEEP l,r: LET r=r-1
+ 1020 PRINT AT 4,4; INK 4;"\::\::\::\:: \::\::\::\:: \::\::\::\:: \::\::\::\:: \::\::\::\::": BEEP l,r: LET r=r-1
+ 1030 PRINT AT 5,4; INK 5;"\::  \:: \::  \:: \::    \::       \::": BEEP l,r: LET r=r-1
+ 1040 PRINT AT 6,4; INK 6;"\::  \:: \::  \:: \::    \::    \::\::\:: ": BEEP l,r: LET r=r-1
+ 1050 PRINT AT 7,0; INK 2;"\::  \:: \::\::\:: \::   \::  \:: \:: \::\::\:: \::\::\:: \::\::\::": BEEP l,r: LET r=r-1
+ 1060 PRINT AT 8,0; INK 3;"\::\:: \:: \::   \::   \::  \:: \:: \::   \:: \:: \:: \::": BEEP l,r: LET r=r-1
+ 1070 PRINT AT 9,0; INK 4;"\:: \::\:: \::\::  \:: \:: \::  \::\::\:: \::\::  \::\::\:: \::\::\::": BEEP l,r: LET r=r-1
+ 1080 PRINT AT 10,0; INK 5;"\::  \:: \::   \:: \:: \::    \:: \::   \:: \:: \::\::": BEEP l,r: LET r=r-1
+ 1090 PRINT AT 11,0; INK 6;"\::  \:: \::\::\:: \::\::\::\::   \::\::  \::\::\:: \:: \:: \:: \::": BEEP l,r: LET r=r-1
+ 1999 GO TO 2009
+ 2001 LET i=0: FOR y=1 TO 30: PRINT AT x,y; INK i;a$(y): BEEP 0.001,y+30: LET i=i+1
+ 2002 IF i=1 THEN LET i=2
+ 2003 IF i=8 THEN LET i=0
+ 2004 NEXT y
+ 2008 RETURN 
+ 2009 LET x=13: LET a$=" \::\::\::\::    \::\::\::\::    \::\::\::\::    \::\::\::\:: ": GO SUB 2001
+ 2010 LET x=14: LET a$="\::\::\::\::\::\::  \::\::\::\::\::\::  \::\::\::\::\::\::  \::\::\::\::\::\::": GO SUB 2001
+ 2040 LET x=15: LET a$="   \::\::\::  \::\::  \::\::     \::\::\::  \::\::  \::\::": GO SUB 2001
+ 2070 LET x=16: LET a$="\::\::\::\::\::\::  \::\::  \::\::  \::\::\::\::\::\::  \::\::  \::\::": GO SUB 2001
+ 2100 LET x=17: LET a$="\::\::\::     \::\::  \::\::  \::\::\::     \::\::  \::\::": GO SUB 2001
+ 2130 LET x=18: LET a$="\::\::\::\::\::\::  \::\::\::\::\::\::  \::\::\::\::\::\::  \::\::\::\::\::\::": GO SUB 2001
+ 2140 LET x=19: LET a$=" \::\::\::\::\::   \::\::\::\::    \::\::\::\::\::   \::\::\::\:: ": GO SUB 2001
+ 2149 RETURN 
+ 2150 PAUSE 0
+ 2151 GO TO 1000
+ 2500 GO SUB 3000: PAUSE 10: GO SUB 3050: PAUSE 10
+ 2501 GO SUB 3000: PAUSE 10: GO SUB 3050: PAUSE 10
+ 2502 GO SUB 3000: PAUSE 10: GO SUB 3050: PAUSE 10
+ 2503 GO SUB 3000: PAUSE 10: GO SUB 3050: PAUSE 10
+ 2504 GO SUB 3000: PAUSE 10: GO SUB 3050: PAUSE 10
+ 2505 GO SUB 3000: PAUSE 10: GO SUB 3050: PAUSE 10
+ 2540 IF e=1 THEN GO TO 4080
+ 2550 GO TO 100
+ 3000 REM Peeps1
+ 3001 PRINT AT 0,1;"\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i"
+ 3010 PRINT AT 1,1;"\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c"
+ 3030 PRINT AT 20,1;"\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k"
+ 3040 PRINT AT 21,1;"\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g"
+ 3045 RETURN 
+ 3050 REM Peeps2
+ 3051 PRINT AT 0,1;"\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k\l\e\f\k"
+ 3060 PRINT AT 1,1;"\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g\h\g"
+ 3070 PRINT AT 20,1;"\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i\j\a\b\i"
+ 3080 PRINT AT 21,1;"\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c\d\c"
+ 3085 RETURN 
+ 4000 REM fireworks
+ 4001 LET y=7
+ 4009 PAPER 0: CLS 
+ 4010 PRINT AT 0,10; INK 5;"\n \o";AT 0,13; INK 2;"S";AT 0,14; INK 6;"p";AT 0,15; INK 4;"e";AT 0,16; INK 5;"c";AT 0,17; INK 2;"t";AT 0,18; INK 6;"r";AT 0,19; INK 4;"u";AT 0,20; INK 5;"m";AT 0,21; INK 2;"N";AT 0,22; INK 6;"e";AT 0,23; INK 4;"z"
+ 4014 LET x=20: LET z=1: LET s=20
+ 4015 LET i = (RND*6)+1
+ 4020 FOR x=20 TO 10 STEP -1
+ 4030 PRINT AT x+1,y;" ": PRINT AT x,y;"\m"
+ 4035 BEEP .01,s
+ 4036 LET s=s+1
+ 4040 NEXT x
+ 4045 LET a$="M56N2c"
+ 4046 PLAY a$
+ 4050 FOR x=9 TO 3 STEP -1
+ 4060 PRINT AT x+1,0;"                              ": PRINT AT X,Y; INK (RND*6)+1; "*";AT x,y+z; INK (RND*6)+1;"*";AT x,y-z; INK (RND*6)+1;"*"; ;AT (x+z)+(z-1),0;"                              ";AT (x+z)+z,y; INK (RND*6)+1;"*";AT (x+z)+z,y+z; INK (RND*6)+1;"*";AT (x+z)+z,y-z; INK (RND*6)+1;"*"
+ 4061 LET z=z+1
+ 4070 NEXT x
+ 4075 RETURN 
+ 4080 LET z$="SpectrumNez": LET q=13: BORDER 0: PAPER 0: INK 6: CLS 
+ 4081 LET i=2: PRINT AT 0,10; INK 5;"\n \o"
+ 4082 FOR l=1 TO 11
+ 4083 PRINT AT 0,q; INK i;z$(l): BEEP .01,l
+ 4084 LET q=q+1: LET i=i+1
+ 4085 IF i=7 THEN LET i=4
+ 4086 IF i=5 THEN LET i=5
+ 4087 IF i=6 THEN LET i=2
+ 4088 IF i=3 THEN LET i=6
+ 4089 NEXT l
+ 5079 LET y=7 : GO SUB 4009
+ 5080 LET y=15 : GO SUB 4009
+ 5081 LET y=18 : GO SUB 4009
+ 5082 LET y=4 : GO SUB 4009
+ 5083 LET y=24 : GO SUB 4009
+ 5084 LET y=9 : GO SUB 4009
+ 5085 LET y=20 : GO SUB 4009
+ 5086 LET y=12 : GO SUB 4009
+ 5087 LET y=19 : GO SUB 4009
+ 5090 PAPER 0: CLS 
+ 5091 PRINT AT 0,10; INK 5;"\n \o";AT 0,13; INK 2;"S";AT 0,14; INK 6;"p";AT 0,15; INK 4;"e";AT 0,16; INK 5;"c";AT 0,17; INK 2;"t";AT 0,18; INK 6;"r";AT 0,19; INK 4;"u";AT 0,20; INK 5;"m";AT 0,21; INK 2;"N";AT 0,22; INK 6;"e";AT 0,23; INK 4;"z"
+ 5092 PAUSE 0

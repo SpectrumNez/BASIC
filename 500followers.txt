@@ -1,0 +1,106 @@
+    1 LET b=3: BORDER 3: PAPER 3: CLS 
+    2 LET i=0
+    3 LET s=1
+    4 LET r=0.01
+    5 LET w=1
+   10 LET x=1
+   14 LET m=1
+   15 LET n=7
+   16 LET f$="\a\b\c\c\b\d\e\f\g\j\j\j"
+   17 LET z$="SpectrumNez"
+   20 FOR z=1 TO 80
+   21 READ graph
+   22 POKE USR "a"+(z-1),graph
+   23 NEXT z
+   24 DATA 31,16,32,32,124,64,128,128,14,17,34,34,68,68,136,112,16,16,32,32,64,64,132,248,17,17,34,34,84,84,168,248,31,16,32,32,120,64,128,252,31,17,34,34,124,72,132,132,15,16,32,60,2,2,4,248,13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0,6,14,12,24,24,0,48,48
+  100 GO SUB 300
+  110 LET n=2
+  115 GO SUB 300
+  120 LET n=7
+  125 GO SUB 300
+  130 LET m=6: LET n=7
+  135 GO SUB 300
+  140 LET m=1: LET n=7
+  145 GO SUB 300
+  150 LET x=1: LET w=2: LET m=10: LET n=16: GO SUB 400
+  160 LET m=10: LET n=11: GO SUB 400: GO SUB 400: GO SUB 400
+  170 LET m=10: LET n=16: GO SUB 400
+  180 LET x=3: LET m=15: LET n=16: GO SUB 400: GO SUB 400: GO SUB 400
+  190 LET x=1: LET m=19: LET n=25: GO SUB 400
+  200 LET m=19: LET n=20: GO SUB 400: GO SUB 400: GO SUB 400
+  210 LET m=19: LET n=25: GO SUB 400
+  220 LET x=3: LET m=24: LET n=25: GO SUB 400: GO SUB 400: GO SUB 400
+  299 GO TO 500
+  300 REM Draw Number 5
+  301 FOR y=m TO n STEP s
+  302 BORDER b: LET b=b+1: IF b=8 THEN LET b=0
+  310 PRINT AT x,y; INK i;"\::"
+  311 BEEP r,y*w
+  315 LET i=i+1: IF i=3 THEN LET i=4
+  316 IF i=8 THEN LET i=0
+  320 NEXT y
+  330 LET x=x+1
+  340 FOR y=n TO m STEP -s
+  341 BORDER b: LET b=b+1: IF b=8 THEN LET b=0
+  350 PRINT AT x,y; INK i;"\::"
+  351 BEEP r,y*w
+  355 LET i=i+1: IF i=3 THEN LET i=4
+  356 IF i=8 THEN LET i=0
+  360 NEXT y
+  370 LET x=x+1
+  380 RETURN 
+  400 REM Draw Number 0
+  401 FOR y=m TO n STEP s
+  410 PRINT AT x,y; INK i;"\::"
+  411 BEEP r,y*w
+  412 BORDER b: LET b=b+1: IF b=8 THEN LET b=0
+  415 LET i=i+1: IF i=3 THEN LET i=4
+  416 IF i=8 THEN LET i=0
+  420 NEXT y
+  430 LET x=x+1
+  440 FOR y=n TO m STEP -s
+  450 PRINT AT x,y; INK i;"\::"
+  451 BEEP r,y*w
+  452 BORDER b: LET b=b+1: IF b=8 THEN LET b=0
+  455 LET i=i+1: IF i=3 THEN LET i=4
+  456 IF i=8 THEN LET i=0
+  460 NEXT y
+  470 LET x=x+1
+  480 RETURN 
+  500 LET q=19: FOR l=12 TO 1 STEP -1
+  504 BORDER 3
+  505 PRINT AT 13,q; INK 6;f$(l): BEEP .01,l
+  510 LET q=q-1
+  520 NEXT l
+  530 GO SUB 800
+  600 PAPER 0: PRINT AT 19,15; INK 0;"\:'\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+  601 PRINT AT 20,15; INK 0;"\:               \ :"
+  602 PRINT AT 21,15; INK 0;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+  603 PRINT AT 20,16; INK 5;"\h \i"
+  609 LET i=2: LET q=19
+  610 FOR l=1 TO 11
+  620 PRINT AT 20,q; INK i;z$(l): BEEP .01,l
+  630 LET q=q+1: LET i=i+1
+  640 IF i=7 THEN LET i=4
+  650 IF i=5 THEN LET i=5
+  660 IF i=6 THEN LET i=2
+  670 IF i=3 THEN LET i=6
+  680 NEXT l
+  690 PAUSE 30
+  700 LET b=7: LET u=-5
+  710 FOR j=4 TO 1 STEP -1
+  720 BORDER b
+  730 LET b=b-1: IF b<0 THEN LET b=7
+  735 BEEP 0.1,u
+  736 LET u=u-2: IF u=-13 THEN LET u=-5
+  740 PAUSE 30
+  750 GO TO 710
+  800 LET t$="\':\'  \:.\:  \:'\:  \:'\.  \:.\'   \:.\:  \:'\:  \: \:   \:  \:  \: "
+  801 LET y$="\ :  \: \:  \:'\:  \: \:  \:'\.   \ :  \:.\:  \:.\:   \.  \.  \. "
+  820 FOR l=1 TO 31
+  830 PRINT AT 15,l; PAPER 3; INK 4; BRIGHT 1;t$(l): BEEP .01,l
+  840 NEXT l
+  850 FOR l=31 TO 1 STEP -1
+  860 PRINT AT 16,l; PAPER 3; INK 4;y$(l): BEEP .01,l
+  870 NEXT l
+  890 RETURN 

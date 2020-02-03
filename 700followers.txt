@@ -1,0 +1,122 @@
+    1 LET x=5: LET y=5: LET i=2: LET x1=11: LET y1=2: LET w=21: LET b=19: LET g=2
+    2 FOR n=1 TO 24
+    3 READ graph
+    4 POKE USR "a"+(n-1),graph
+    5 NEXT n
+    6 DATA 13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0,112,32,248,252,252,28,62,62
+   10 BORDER 0: PAPER 0: CLS 
+   11 GO SUB 1000
+   19 PRINT AT 0,0; INK 6;"\c"
+   20 PRINT AT x1-1,y1-2; INK g;"\::";AT x1-1,y1+17; INK g;"\::"
+   21 PRINT AT x1,y1-2; INK g;"\::";AT x1,y1+17; INK g;"\::"
+   22 PRINT AT x1+1,y1-2; INK g;"\::";AT x1+1,y1+17; INK g;"\::"
+   23 PRINT AT x1+2,y1-2; INK g;"\::";AT x1+2,y1+17; INK g;"\::"
+   24 PRINT AT x1+3,y1-2; INK g;"\::";AT x1+3,y1+17; INK g;"\::"
+   25 PRINT AT x1+4,y1-2; INK g;"\::";AT x1+4,y1+17; INK g;"\::"
+   26 PRINT AT x1+5,y1-2; INK g;"\::";AT x1+5,y1+17; INK g;"\::"
+   27 PRINT AT x1+6,y1-2; INK g;"\::";AT x1+6,y1+17; INK g;"\::"
+   28 PRINT AT x1+7,y1-2; INK g;"\::";AT x1+7,y1+17; INK g;"\::"
+   29 PRINT AT x1+8,y1-2; INK g;"\::";AT x1+8,y1+17; INK g;"\::"
+   30 PRINT AT x1+9,y1-2; INK g;"\::";AT x1+9,y1+17; INK g;"\::"
+   31 PRINT AT x1+10,y1-2; INK g;"\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::"
+   32 GO SUB 1000
+  100 PRINT AT x1,y1; INK i;"\::\::\::\::";AT x1,y1+6; INK i;"\::\::\::\::";AT x1,y1+12; INK i ;"\::\::\::\::"
+  101 PRINT AT x1+1,y1; INK i;"   \::";AT x1+1,y1+6; INK i;"\::  \::";AT x1+1,y1+12; INK i ;"\::  \::"
+  102 PRINT AT x1+2,y1; INK i;"   \::";AT x1+2,y1+6; INK i;"\::  \::";AT x1+2,y1+12; INK i ;"\::  \::"
+  103 PRINT AT x1+3,y1; INK i;"   \::";AT x1+3,y1+6; INK i;"\::  \::";AT x1+3,y1+12; INK i ;"\::  \::"
+  104 PRINT AT x1+4,y1; INK i;"  \:: ";AT x1+4,y1+6; INK i;"\::  \::";AT x1+4,y1+12; INK i ;"\::  \::"
+  105 PRINT AT x1+5,y1; INK i;"  \:: ";AT x1+5,y1+6; INK i;"\::  \::";AT x1+5,y1+12; INK i ;"\::  \::"
+  106 PRINT AT x1+6,y1; INK i;"  \:: ";AT x1+6,y1+6; INK i;"\::  \::";AT x1+6,y1+12; INK i ;"\::  \::"
+  107 PRINT AT x1+7,y1; INK i;" \::  ";AT x1+7,y1+6; INK i;"\::  \::";AT x1+7,y1+12; INK i ;"\::  \::"
+  108 PRINT AT x1+8,y1; INK i;" \::  ";AT x1+8,y1+6; INK i;"\::\::\::\::";AT x1+8,y1+12; INK i ;"\::\::\::\::"
+  499 LET y=0: LET e=0
+  500 FOR e=1 TO 30
+  501 BEEP .009,e: NEXT e
+  502 FOR x=1 TO 21
+  503 IF y=18 THEN GO TO 700
+  504 IF ATTR (x,y)=2 THEN GO SUB 600
+  507 PRINT AT x,y; INK 5;"\::"
+  510 NEXT x
+  599 GO TO 499
+  600 REM Collision
+  601 LET y=y+1
+  602 PRINT AT x-1,y; INK 5;"\::"
+  607 LET x=x-1
+  610 RETURN 
+  700 REM FILL
+  704 FOR b=b TO 9 STEP -1
+  705 FOR y=2 TO 18
+  715 PRINT AT b,y; INK 5; OVER 1;"\::"
+  720 NEXT y
+  725 NEXT b
+  790 LET b=b+1
+  800 PRINT AT b,y; INK 5; OVER 1;"\::"
+  805 LET y=y+1
+  810 FOR b=b TO 21
+  820 PRINT AT b,y; INK 5; OVER 1;"\::"
+  830 NEXT b
+  835 LET b=b-1
+  840 FOR b=21 TO 9 STEP -1
+  845 FOR y=21 TO 31
+  850 PRINT AT b,y; INK 5; OVER 1;"\::"
+  855 NEXT y
+  860 NEXT b
+  900 FOR b=8 TO 0 STEP -1
+  910 FOR y=1 TO 31
+  920 PRINT AT b,y; INK 5; OVER 1;"\::"
+  930 NEXT y
+  940 NEXT b
+  999 GO TO 2000
+ 1000 LET a$="\':\' \:.\: \.'\'. \:.\ : \:.\.'  \'.\.: \.'\'. \: \ : \ :\ :\ : "
+ 1010 LET b$="\ : \: \: \:'\': \: \': \:'\'.  \ .\.: \'.\.' \'.\.' \ .\ .\ . "
+ 1020 LET c$="FOLLOWERS!"
+ 1030 LET d$="SpectrumNez"
+ 1040 LET d$="SpectrumNez"
+ 1100 PRINT AT 6,3; INK 0;a$
+ 1200 PRINT AT 7,3; INK 0;b$
+ 1250 PRINT AT 16,21; INK 0;c$
+ 1260 PRINT AT 1,8; INK 0;"\:'\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+ 1270 PRINT AT 2,8; INK 0;"\: \a \bSpectrumNez\ :"
+ 1280 PRINT AT 3,8; INK 0;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+ 1300 RETURN 
+ 2000 LET i=1: LET p=1
+ 2001 FOR r=3 TO 29
+ 2002 PRINT AT 6,r; PAPER 5; INK i;a$(p)
+ 2003 BEEP .009,r
+ 2004 LET i=i+1: LET p=p+1
+ 2005 IF i=7 THEN LET i=1
+ 2006 IF i=5 THEN LET i=6
+ 2009 NEXT r
+ 2500 LET i=2: LET p=1
+ 2501 FOR r=3 TO 29
+ 2502 PRINT AT 7,r; PAPER 5; INK i;b$(p)
+ 2503 BEEP .009,r
+ 2504 LET i=i+1: LET p=p+1
+ 2505 IF i=7 THEN LET i=1
+ 2506 IF i=5 THEN LET i=6
+ 2509 NEXT r
+ 2510 PRINT AT 1,8; PAPER 0; INK 1;"\:'\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+ 2520 PRINT AT 2,8; PAPER 0; INK 1;"\: ";AT 2,23; PAPER 0; INK 1;"\ :"
+ 2530 PRINT AT 3,8; PAPER 0; INK 1;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+ 2998 PRINT AT 2,9; PAPER 0; INK 5;"\a "
+ 2999 PRINT AT 2,11; INK 7;"\b"
+ 3000 LET z$="SpectrumNez": LET q=12
+ 3010 LET i=2
+ 3020 FOR l=1 TO 11
+ 3030 PRINT AT 2,q; INK i;z$(l): BEEP .01,l
+ 3040 LET q=q+1: LET i=i+1
+ 3050 IF i=7 THEN LET i=4
+ 3060 IF i=5 THEN LET i=5
+ 3070 IF i=6 THEN LET i=2
+ 3080 IF i=3 THEN LET i=6
+ 3090 NEXT l
+ 3999 LET j=1
+ 4000 FOR j=1 TO 7
+ 4010 BORDER j
+ 4020 FOR l=50 TO 25 STEP -2
+ 4030 BEEP .01,l
+ 4040 NEXT l
+ 4045 NEXT j
+ 4050 GO TO 4000
+ 8000 REM 700 Followers
+ 8100 REM \bSpectrumNez

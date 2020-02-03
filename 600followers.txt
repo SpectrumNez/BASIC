@@ -1,0 +1,162 @@
+    1 BORDER 1: PAPER 1: INK 0: CLS : GO SUB 100: GO TO 122
+    2 LET x=3: LET y1=3: LET y2=3: LET y3=3: LET y4=3: LET y5=3: LET y6=3: LET i=0: LET b=4
+    3 LET f$="F O L L O W E R S !": LET p=2
+    4 FOR g=19 TO 1 STEP -1
+    5 PRINT AT 11,g+6; INK p;f$(g): BEEP .009,g
+    6 LET p=p+1
+    7 IF p=1 THEN LET p=2
+    8 IF p=8 THEN LET p=2
+    9 NEXT g
+   10 GO SUB 1000: GO SUB 7500: FOR i=0 TO 7: GO SUB 1000
+   11 IF i=1 THEN LET i=i+1
+   12 INK i: NEXT i
+   13 FOR i=0 TO 7: GO SUB 1000
+   14 IF i=1 THEN LET i=i+1
+   15 INK i: NEXT i
+   22 LET y1=4: GO SUB 1000: INK 2
+   23 LET y1=5: LET y2=4: GO SUB 1000 : INK 3
+   24 LET y1=6: LET y2=5: LET y3=4: GO SUB 1000: INK 4
+   25 LET y1=7: LET y2=6: LET y3=5: LET y4=4: GO SUB 1000: INK 5
+   26 LET y1=8: LET y2=7: LET y3=6: LET y4=5: LET y5=4: GO SUB 1000: INK 6
+   27 LET y1=9: LET y2=8: LET y3=7: LET y4=6: LET y5=5: LET y6=4: GO SUB 1000: INK 7
+   28 LET y1=10: LET y2=9: LET y3=8: LET y4=7: LET y5=6: LET y6=5: GO SUB 1000: INK 0
+   29 LET y1=9: LET y2=10: LET y3=9: LET y4=8: LET y5=7: LET y6=6: GO SUB 1000 : INK 2
+   30 LET y1=8: LET y2=9: LET y3=10: LET y4=9: LET y5=8: LET y6=7: GO SUB 1000: INK 3
+   31 LET y1=7: LET y2=8: LET y3=9: LET y4=10: LET y5=9: LET y6=8: GO SUB 1000: INK 4
+   32 LET y1=6: LET y2=7: LET y3=8: LET y4=9: LET y5=10: LET y6=9: GO SUB 1000: INK 5
+   33 LET y1=5: LET y2=6: LET y3=7: LET y4=8: LET y5=9: LET y6=10: GO SUB 1000: INK 6
+   34 LET y1=4: LET y2=5: LET y3=6: LET y4=7: LET y5=8: LET y6=9: GO SUB 1000: INK 7
+   35 LET y1=3: LET y2=4: LET y3=5: LET y4=6: LET y5=7: LET y6=8: GO SUB 1000: INK 0
+   36 LET y1=2: LET y2=3: LET y3=4: LET y4=5: LET y5=6: LET y6=7: GO SUB 1000: INK 2
+   37 LET y1=1: LET y2=2: LET y3=3: LET y4=4: LET y5=5: LET y6=6: GO SUB 1000: INK 3
+   38 LET y1=0: LET y2=1: LET y3=2: LET y4=3: LET y5=4: LET y6=5: GO SUB 1000: INK 4
+   39 LET y1=1: LET y2=0: LET y3=1: LET y4=2: LET y5=3: LET y6=4: GO SUB 1000: INK 5
+   40 LET y1=2: LET y2=1: LET y3=0: LET y4=1: LET y5=2: LET y6=3: GO SUB 1000: INK 6
+   41 LET y1=3: LET y2=2: LET y3=1: LET y4=0: LET y5=1: LET y6=2: GO SUB 1000: INK 7
+   42 LET y1=4: LET y2=3: LET y3=2: LET y4=1: LET y5=0: LET y6=1: GO SUB 1000: INK 0
+   43 LET y1=5: LET y2=4: LET y3=3: LET y4=2: LET y5=1: LET y6=0: GO SUB 1000 : INK 2
+   44 LET y1=6: LET y2=5: LET y3=4: LET y4=3: LET y5=2: LET y6=1: GO SUB 1000: INK 3
+   45 LET y1=7: LET y2=6: LET y3=5: LET y4=4: LET y5=3: LET y6=2: GO SUB 1000: INK 4
+   46 LET y1=8: LET y2=7: LET y3=6: LET y4=5: LET y5=4: LET y6=3: GO TO 26
+   75 PRINT AT 11,g+6;f$(g)
+  100 FOR n=1 TO 48
+  101 READ graph
+  102 POKE USR "a"+(n-1),graph
+  103 NEXT n
+  104 DATA 13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0,0,0,0,0,1,3,7,15,0,0,0,0,128,192,224,240,15,7,3,1,0,0,0,0,240,224,192,128,0,0,0,0
+  105 RETURN 
+  110 LET z$=" \bSpectrumNez": LET q=9
+  111 FOR l=1 TO 13
+  112 IF (w=19) AND (l=2) THEN PRINT AT 19,9; PAPER 1; INK 5;"\a"
+  113 PRINT AT w,q; PAPER i; INK 0;" ": BEEP .009,l: IF w=19 THEN PRINT AT w,q; PAPER i; INK 0;z$(l)
+  114 LET q=q+1: LET i=i+1
+  115 IF i=7 THEN LET i=4
+  116 IF i=5 THEN LET i=5
+  117 IF i=6 THEN LET i=2
+  118 IF i=3 THEN LET i=6
+  119 NEXT l
+  120 LET w=w+1
+  121 RETURN 
+  122 PRINT AT 17,8;"\c\..\..\..\..\..\..\..\..\..\..\..\..\..\d"
+  123 PRINT AT 18,8;"\ :";AT 18,22;"\: "
+  124 PRINT AT 19,8;"\ :";AT 19,22;"\: "
+  125 PRINT AT 20,8;"\ :";AT 20,22;"\: "
+  126 PRINT AT 21,8;"\e\''\''\''\''\''\''\''\''\''\''\''\''\''\f"
+  132 LET w=18: LET i=4
+  133 GO SUB 110: GO SUB 110: GO SUB 110
+  200 REM T
+  201 INK 2: LET y=0: LET d=13
+  202 FOR x=0 TO d
+  203 PRINT AT x,y;"   "
+  204 PRINT AT x+1,y;"\''\:'\' "
+  205 PRINT AT x+2,y;" \: "
+  206 PRINT AT x+3,y;" \: "
+  207 BEEP .009,-x: NEXT x
+  210 REM H
+  211 INK 3: LET y=3
+  212 FOR x=0 TO d
+  213 PRINT AT x,y;"   "
+  214 PRINT AT x+1,y;"\:  \ :"
+  215 PRINT AT x+2,y;"\:'\''\':"
+  216 PRINT AT x+3,y;"\:  \ :"
+  217 BEEP .009,-x: NEXT x
+  220 REM a
+  221 INK 4: LET y=7
+  222 FOR x=0 TO d
+  223 PRINT AT x,y;"   "
+  224 PRINT AT x+1,y;"\.'\''\'."
+  225 PRINT AT x+2,y;"\:.\..\.:"
+  226 PRINT AT x+3,y;"\:  \ :"
+  227 BEEP .009,-x: NEXT x
+  230 REM n
+  231 INK 5: LET y=11
+  232 FOR x=0 TO d
+  233 PRINT AT x,y;"   "
+  234 PRINT AT x+1,y;"\:. \ :"
+  235 PRINT AT x+2,y;"\: \'.\ :"
+  236 PRINT AT x+3,y;"\:  \':"
+  237 BEEP .009,-x: NEXT x
+  240 REM k
+  241 INK 6: LET y=15
+  242 FOR x=0 TO d
+  243 PRINT AT x,y;"   "
+  244 PRINT AT x+1,y;"\: \ .\.'"
+  245 PRINT AT x+2,y;"\:'\'. "
+  246 PRINT AT x+3,y;"\:  \'."
+  247 BEEP .009,-x: NEXT x
+  250 REM y
+  251 INK 5: LET y=20
+  252 FOR x=0 TO d
+  253 PRINT AT x,y;"   "
+  254 PRINT AT x+1,y;"\:  \: "
+  255 PRINT AT x+2,y;"\ '\:'"
+  256 PRINT AT x+3,y;" \: "
+  257 BEEP .009,-x: NEXT x
+  260 REM o
+  261 INK 4: LET y=23
+  262 FOR x=0 TO d
+  263 PRINT AT x,y;"   "
+  264 PRINT AT x+1,y;"\.'\''\'."
+  265 PRINT AT x+2,y;"\:  \ :"
+  266 PRINT AT x+3,y;"\'.\..\.'"
+  267 BEEP .009,-x: NEXT x
+  270 REM u
+  271 INK 3: LET y=27
+  272 FOR x=0 TO d
+  273 PRINT AT x,y;"   "
+  274 PRINT AT x+1,y;"\:  \ :"
+  275 PRINT AT x+2,y;"\:  \ :"
+  276 PRINT AT x+3,y;"\'.\..\.'"
+  277 BEEP .009,-x: NEXT x
+  280 REM !
+  281 INK 2: LET y=31
+  282 FOR x=0 TO d
+  283 PRINT AT x,y;" "
+  284 PRINT AT x+1,y;"\: "
+  285 PRINT AT x+2,y;"\: "
+  286 PRINT AT x+3,y;"\. "
+  287 BEEP .009,-x: NEXT x
+  288 GO TO 2
+ 1000 PRINT AT x,y1;" \::\::\::\::\::   \::\::\::\::\::   \::\::\::\::\:: "
+ 2000 PRINT AT x+1,y2;" \::       \::   \::   \::   \:: "
+ 3000 PRINT AT x+2,y3;" \::\::\::\::\::   \::   \::   \::   \:: "
+ 4000 PRINT AT x+3,y4;" \::   \::   \::   \::   \::   \:: "
+ 5000 PRINT AT x+4,y5;" \::   \::   \::   \::   \::   \:: "
+ 6000 PRINT AT x+5,y6;" \::\::\::\::\::   \::\::\::\::\::   \::\::\::\::\::  "
+ 6500 IF y1=10 THEN LET b=b+1: BEEP .009,(RND*50)
+ 6510 IF y1=0 THEN LET b=b+1: BEEP 0.009,(RND*50)
+ 6540 IF b=8 THEN LET b=0
+ 6550 BORDER b
+ 7000 RETURN 
+ 7204 PRINT AT x+1,y;" \::"
+ 7500 LET a$="O7N2c"
+ 7501 LET b$="O6N2e"
+ 7502 LET c$="O5N2g"
+ 7503 PLAY a$,b$,c$
+ 7504 LET a$="O7N6c"
+ 7505 LET b$="O6N6e"
+ 7506 LET c$="O5N6g"
+ 7507 PLAY a$,b$,c$
+ 7508 RETURN 
+ 8000 REM 600 Followers
+ 8100 REM @SpectrumNez

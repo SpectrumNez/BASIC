@@ -1,0 +1,218 @@
+    1 LET mx=10
+    2 LET my=5
+    3 LET px=11
+    4 LET py=30
+    5 LET p=3
+    6 LET d=100
+    7 LET m=3
+    8 LET s=2
+    9 LET i=1: LET g=9: LET z=1: LET e=0: LET h=0
+   10 PAPER 7: BORDER 7: CLS 
+  100 FOR n=1 TO 112
+  110 READ graph
+  120 POKE USR "a"+(n-1),graph
+  130 NEXT n
+  140 DATA 0,0,0,3,7,6,5,2, 0,0,48,200,200,52,26,30, 2,3,7,31,60,225,193,128,96,128,224,240,112,224,0,0,0,0,0,1,15,20,8,0, 0,12,114,210,141,139,141,151, 0,0,17,59,47,6,0,0, 226,240,248,156,12,12,7,6,0,0,0,0,0,1,3,1, 0,0,24,36,228,24,16,84, 0,0,0,7,15,8,0,0, 172,224,224,240,176,48,96,240,13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0
+  150 GO SUB 1000
+  199 PRINT AT mx,my;"\a\b": PRINT AT mx+1,my;"\c\d"
+  200 IF (py=27) OR (py=18) OR (py=9) THEN PRINT AT mx,my;"\a\b": PRINT AT mx+1,my;"\c\d"
+  230 IF (py=24) OR (py=15) OR (py=6) THEN PRINT AT mx,my;"\e\f": PRINT AT mx+1,my;"\g\h"
+  260 IF (py=21) OR (py=12) OR (py=3) THEN PRINT AT mx,my;"\i\j": PRINT AT mx+1,my;"\k\l"
+  270 PRINT AT px,py+1;" "
+  271 PRINT AT px+1,py;"\ :    "
+  273 PRINT AT px+2,py-1;d,"    "
+  300 BEEP .009,-10
+  350 LET py=py-3
+  360 IF py=0 THEN GO SUB 600
+  500 GO TO 200
+  600 PRINT AT px+1,py+1;"   ": PRINT AT px+2,py;"     ": LET py=30: LET d=d+100
+  610 IF d=900 THEN GO TO 3700
+  620 IF d=200 THEN GO SUB 3000
+  630 IF d=300 THEN GO SUB 3100
+  640 IF d=400 THEN GO SUB 3200
+  650 IF d=500 THEN GO SUB 3300
+  660 IF d=600 THEN GO SUB 3400
+  670 IF d=700 THEN GO SUB 3500
+  680 IF d=800 THEN GO SUB 3600
+  700 RETURN 
+ 1000 REM Draw Background
+ 1010 FOR x=0 TO 8
+ 1020 PRINT AT x,0; INK 5;"\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::"
+ 1030 NEXT x
+ 1040 FOR x=15 TO 21
+ 1050 PRINT AT x,0; INK 4;"\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::"
+ 1060 NEXT x
+ 1070 PRINT AT 7,7; PAPER 5; INK 3;"F O L L O W E R S !"
+ 1140 RETURN 
+ 2000 FOR m=3 TO 28 STEP 2
+ 2001 PRINT AT mx,m;"  \a\b"
+ 2101 PRINT AT mx+1,m;"  \c\d"
+ 2201 PAUSE p
+ 2301 PRINT AT mx,m;"  \e\f"
+ 2401 PRINT AT mx+1,m;"  \g\h"
+ 2501 PAUSE p
+ 2601 PRINT AT mx,m;"  \i\j"
+ 2701 PRINT AT mx+1,m;"  \k\l"
+ 2801 PAUSE p
+ 2805 BEEP .009,-10
+ 2901 NEXT m
+ 2950 PRINT AT mx,m;"    ": PRINT AT mx+1,m,;"    "
+ 2951 GO TO 4000
+ 3000 REM 100
+ 3010 PRINT AT 1,g; PAPER 5;"   \:: \::\::\::\:: \::\::\::\::"
+ 3020 PRINT AT 2,g; PAPER 5;"  \::\:: \::  \:: \::  \::"
+ 3030 PRINT AT 3,g; PAPER 5;"   \:: \::  \:: \::  \::"
+ 3040 PRINT AT 4,g; PAPER 5;"   \:: \::  \:: \::  \::"
+ 3050 PRINT AT 5,g; PAPER 5;"   \:: \::\::\::\:: \::\::\::\::"
+ 3060 RETURN 
+ 3100 REM 200
+ 3110 PRINT AT 1,g; PAPER 5;"\::\::\::\::"
+ 3120 PRINT AT 2,g; PAPER 5;"   \::"
+ 3130 PRINT AT 3,g; PAPER 5;"\::\::\::\::"
+ 3140 PRINT AT 4,g; PAPER 5;"\::   "
+ 3150 PRINT AT 5,g; PAPER 5;"\::\::\::\::"
+ 3160 RETURN 
+ 3200 REM 300
+ 3210 PRINT AT 1,g; PAPER 5;"\::\::\::\::"
+ 3220 PRINT AT 2,g; PAPER 5;"   \::"
+ 3230 PRINT AT 3,g; PAPER 5;"\::\::\::\::"
+ 3240 PRINT AT 4,g; PAPER 5;"   \::"
+ 3250 PRINT AT 5,g; PAPER 5;"\::\::\::\::"
+ 3260 RETURN 
+ 3300 REM 400
+ 3310 PRINT AT 1,g; PAPER 5;"\::  \::"
+ 3320 PRINT AT 2,g; PAPER 5;"\::  \::"
+ 3330 PRINT AT 3,g; PAPER 5;"\::\::\::\::"
+ 3340 PRINT AT 4,g; PAPER 5;"   \::"
+ 3350 PRINT AT 5,g; PAPER 5;"   \::"
+ 3360 RETURN 
+ 3400 REM 500
+ 3410 PRINT AT 1,g; PAPER 5;"\::\::\::\::"
+ 3420 PRINT AT 2,g; PAPER 5;"\::   "
+ 3430 PRINT AT 3,g; PAPER 5;"\::\::\::\::"
+ 3440 PRINT AT 4,g; PAPER 5;"   \::"
+ 3450 PRINT AT 5,g; PAPER 5;"\::\::\::\::"
+ 3460 RETURN 
+ 3500 REM 600
+ 3510 PRINT AT 1,g; PAPER 5;"\::\::\::\::"
+ 3520 PRINT AT 2,g; PAPER 5;"\::   "
+ 3530 PRINT AT 3,g; PAPER 5;"\::\::\::\::"
+ 3540 PRINT AT 4,g; PAPER 5;"\::  \::"
+ 3550 PRINT AT 5,g; PAPER 5;"\::\::\::\::"
+ 3560 RETURN 
+ 3600 REM 700
+ 3610 PRINT AT 1,g; PAPER 5;"\::\::\::\::"
+ 3620 PRINT AT 2,g; PAPER 5;"   \::"
+ 3630 PRINT AT 3,g; PAPER 5;"   \::"
+ 3640 PRINT AT 4,g; PAPER 5;"   \::"
+ 3650 PRINT AT 5,g; PAPER 5;"   \::"
+ 3660 RETURN 
+ 3700 REM 800
+ 3710 PRINT AT 1,g; PAPER 5; FLASH z;"\::\::\::\::"; FLASH 0;" "; FLASH z;"\::\::\::\::"; FLASH 0;" "; FLASH z;"\::\::\::\::"
+ 3720 PRINT AT 2,g; PAPER 5; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"; FLASH 0;" "; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"; FLASH 0;" "; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"
+ 3730 PRINT AT 3,g; PAPER 5; FLASH z;"\::\::\::\::"; FLASH 0;" "; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"; FLASH 0;" "; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"
+ 3740 PRINT AT 4,g; PAPER 5; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"; FLASH 0;" "; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"; FLASH 0;" "; FLASH z;"\::"; FLASH 0;"  "; FLASH z;"\::"
+ 3750 PRINT AT 5,g; PAPER 5; FLASH z;"\::\::\::\::"; FLASH 0;" "; FLASH z;"\::\::\::\::"; FLASH 0;" "; FLASH z;"\::\::\::\::"
+ 3753 IF (e=0) AND (z=1) AND (h=1) THEN GO TO 7099
+ 3756 IF (e=0) AND (z=0) THEN GO TO 6600
+ 3757 IF e=0 THEN GO TO 2000
+ 3759 IF e=1 THEN GO TO 6600
+ 4000 LET a$="\':\' \:.\: \.'\'. \:.\ : \:.\.'  \'.\.: \.'\'. \: \ : \ :\ :\ : "
+ 4010 LET b$="\ : \: \: \:'\': \: \': \:'\'.  \ .\.: \'.\.' \'.\.' \ .\ .\ . "
+ 4030 LET i=1: LET p=1: LET r=1
+ 4050 FOR r=3 TO 29
+ 4060 PRINT AT 17,r; PAPER 4; INK i;a$(p)
+ 4070 BEEP .009,r
+ 4080 LET i=i+1: LET p=p+1
+ 4081 IF i=8 THEN LET i=1
+ 4082 IF i=4 THEN LET i=5
+ 4083 IF i=5 THEN LET i=6
+ 4085 NEXT r
+ 4086 LET i=2: LET p=1: LET r=1
+ 4090 FOR r=3 TO 29
+ 4091 PRINT AT 18,r; PAPER 4; INK i;b$(p)
+ 4092 BEEP .009,r+29
+ 4093 LET i=i+1: LET p=p+1
+ 4094 IF i=8 THEN LET i=1
+ 4095 IF i=4 THEN LET i=5
+ 4096 IF i=5 THEN LET i=6
+ 4097 NEXT r
+ 5000 PRINT AT 11,8; PAPER 0; INK 3;"\:'\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+ 5010 PRINT AT 12,8; PAPER 0; INK 3;"\:               \ :"
+ 5020 PRINT AT 13,8; PAPER 0; INK 3;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+ 5998 PRINT AT 12,9; PAPER 0; INK 5;"\m"
+ 5999 PRINT AT 12,11; PAPER 0; INK 7;"\n"
+ 6000 LET z$="SpectrumNez"
+ 6010 LET q=12: LET i=2
+ 6020 FOR l=1 TO 11
+ 6030 PRINT AT 12,q; PAPER 0; INK i;z$(l): BEEP .01,l
+ 6040 LET q=q+1: LET i=i+1
+ 6050 IF i=7 THEN LET i=4
+ 6070 IF i=6 THEN LET i=2
+ 6080 IF i=3 THEN LET i=6
+ 6090 NEXT l
+ 6500 PAUSE 20
+ 6550 LET z=0: GO TO 3700
+ 6600 BORDER 1
+ 7000 LET a$="O6N5c4f4g4a7g8e"
+ 7001 LET b$="O4N5c4f4g4a7g8e"
+ 7002 LET c$="O3N5c4f4g4a7g8e"
+ 7003 PLAY a$,b$,c$: BORDER 2
+ 7004 LET a$="O6N5c4f4g4a9g"
+ 7005 LET b$="O4N5c4f4g4a9g"
+ 7006 LET c$="O3N5c4f4g4a9g"
+ 7007 PLAY a$,b$,c$: BORDER 6
+ 7008 LET a$="O6N5c4f4g4a7g8e"
+ 7009 LET b$="O4N5c4f4g4a7g8e"
+ 7010 LET c$="O3N5c4f4g4a7g8e"
+ 7011 PLAY a$,b$,c$ : BORDER 3
+ 7012 LET a$="O6N5e4f4e4c9c"
+ 7013 LET b$="O4N5e4f4e4c9c"
+ 7014 LET c$="O3N5e4f4e4c9c"
+ 7015 PLAY a$,b$,c$ : BORDER 7
+ 7016 LET a$="O7N5cO6N4b4a4g6b3g6a3f5g"
+ 7017 LET b$="O5N5cO4N4b4a4g6b3g6a3f5g"
+ 7018 LET c$="O4N5cO3N4b4a4g6b3g6a3f5g"
+ 7019 PLAY a$,b$,c$ : BORDER 3
+ 7020 LET a$="O7N5cO6N4b4a4g9b"
+ 7021 LET b$="O5N5cO4N4b4a4g9b"
+ 7022 LET c$="O4N5cO3N4b4a4g9b"
+ 7023 PLAY a$,b$,c$ : BORDER 6
+ 7024 LET a$="O7N5cO6N4b4a4g6b3g6a3f5g5e4f4e4c9c"
+ 7025 LET b$="O5N5cO4N4b4a4g6b3g6a3f5g5e4f4e4c9c"
+ 7026 LET c$="O4N5cO3N4b4a4g6b3g6a3f5g5e4f4e4c9c"
+ 7027 PLAY a$,b$,c$ : BORDER 1
+ 7098 PAPER 4: LET z=1: LET h=1: GO TO 3700
+ 7099 LET m2=0
+ 7100 LET mx=20
+ 7101 LET m=0:
+ 7102 LET p=3
+ 7109 FOR m=0 TO 28 STEP 2
+ 7113 IF m>=14 THEN PRINT AT mx,m2-2;"  ": PRINT AT mx+1,m2-2;"  "
+ 7114 IF (m<=14) AND (m2>=14) THEN PRINT AT mx,m2-2;"  ": PRINT AT mx+1,m2-2;"  "
+ 7115 PRINT AT mx,m;"\a\b"
+ 7120 PRINT AT mx+1,m;"\c\d"
+ 7121 PRINT AT mx,m-2;"  ": PRINT AT mx+1,m-2;"  "
+ 7122 IF m>=14 THEN PRINT AT mx,m2;"\a\b": PRINT AT mx+1,m2;"\c\d"
+ 7123 IF (m<=14) AND (m2>=14) THEN PRINT AT mx,m2;"\a\b": PRINT AT mx+1,m2;"\c\d"
+ 7130 PAUSE p
+ 7140 PRINT AT mx,m;"\e\f"
+ 7150 PRINT AT mx+1,m;"\g\h"
+ 7155 IF m>=14 THEN PRINT AT mx,m2;"\e\f": PRINT AT mx+1,m2;"\g\h"
+ 7156 IF (m<=14) AND (m2>=14) THEN PRINT AT mx,m2;"\e\f": PRINT AT mx+1,m2;"\g\h"
+ 7160 PAUSE p
+ 7170 PRINT AT mx,m;"\i\j"
+ 7180 PRINT AT mx+1,m;"\k\l"
+ 7185 IF m>=14 THEN PRINT AT mx,m2;"\i\j": PRINT AT mx+1,m2;"\k\l"
+ 7186 IF (m<=14) AND (m2>=14) THEN PRINT AT mx,m2;"\i\j": PRINT AT mx+1,m2;"\k\l"
+ 7190 PAUSE p
+ 7200 BEEP .009,-10
+ 7205 IF m>=14 THEN LET m2=m2+2
+ 7206 IF (m<=14) AND (m2>=14) THEN LET m2=m2+2 
+ 7209 IF m2>=30 THEN PRINT AT mx,m2-2;"  ": PRINT AT mx+1,m2-2;"  ": LET m2=0
+ 7210 NEXT m
+ 7215 PRINT AT mx,m-2;"  ": PRINT AT mx+1,m-2;"  "
+ 7250 GO TO 7100
+ 8030 REM 800 Followers
+ 8040 REM 
+ 8050 REM \m \nSpectrumNez

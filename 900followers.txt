@@ -1,0 +1,187 @@
+    1 LET x=19
+    2 LET y=1
+    3 LET p=5
+    4 LET s=180
+    5 LET r=0
+    6 LET i=3
+    7 LET nx=1
+    8 LET ny=5
+    9 LET j=19
+   10 LET g=4
+   11 LET r=20
+   12 LET e=0
+   14 BORDER 7: PAPER 7: CLS 
+   50 FOR n=1 TO 72
+   51 READ graph
+   52 POKE USR "a"+(n-1), graph
+   53 NEXT n
+   54 DATA 6,6,60,12,26,36,255,66,66,255,36,88,48,60,96,96,2,203,246,58,42,38,3,2,64,192,100,84,92,111,211,64,96,96,60,48,88,36,255,66,2,3,38,42,58,246,203,2,0,1,1,3,3,7,15,63,13,158,223,254,126,62,60,120,60,66,154,170,188,128,127,0
+   60 PRINT AT 20,0; INK 4;"\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::"
+   61 PRINT AT 21,0; INK 4;"\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::"
+   62 PRINT AT 19,26; INK 4;"\g"
+   63 FOR g=10 TO 21
+   64 PRINT AT g,27; INK 4;"\::\::\::\::\::"
+   65 NEXT g
+  200 REM Skate right
+  210 FOR y=1 TO 25
+  220 PRINT AT x,y-1;" ";AT x,y;"\a"
+  221 BEEP 0.009,x
+  230 NEXT y
+  300 REM Skate up
+  305 PRINT AT x,y-1;" "
+  310 FOR x=20 TO 5 STEP -1
+  320 IF x=20 THEN PRINT AT x-1,y;" ";AT x-1,y;"\c"
+  325 IF x<20 THEN PRINT AT x,y;" ";AT x-1,y;"\c"
+  326 IF x=19 THEN PRINT AT 19,26; INK 4;"\g"
+  327 BEEP 0.009,j
+  328 LET j=j+1
+  330 NEXT x
+  331 IF s=180 THEN GO TO 400
+  332 IF s=360 THEN GO TO 410
+  333 IF s=540 THEN GO TO 420
+  334 IF s=720 THEN GO TO 430
+  335 IF s=900 THEN GO TO 450
+  336 IF s=1080 THEN GO TO 500
+  337 IF s=1360 THEN GO TO 500
+  400 REM 180
+  401 PRINT AT x+1,y;" "
+  402 PRINT AT x,y;"\b"
+  403 BEEP 0.009,20+INT (RND* r): BORDER INT (RND*7): PAUSE p
+  404 PRINT AT x,y;"\d"
+  405 BEEP 0.009,20+INT (RND* r): BORDER INT (RND*7): PAUSE p
+  406 LET s=360: GO TO 500
+  410 REM 360
+  411 PRINT AT x+1,y;" "
+  412 PRINT AT x,y;"\b"
+  413 BEEP 0.009,20+INT (RND* r): BORDER INT (RND*7): PAUSE p
+  414 PRINT AT x,y;"\d"
+  415 BEEP 0.009,20+INT (RND* r): BORDER INT (RND*7): PAUSE p
+  416 PRINT AT x,y;"\a": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  417 PRINT AT x,y;"\c": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  418 LET s=540: GO TO 500
+  420 REM 540
+  421 PRINT AT x+1,y;" "
+  422 PRINT AT x,y;"\b": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  423 PRINT AT x,y;"\d": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  424 PRINT AT x,y;"\a": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  425 PRINT AT x,y;"\c": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  426 PRINT AT x,y;"\b": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  427 PRINT AT x,y;"\d": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  428 LET s=720: GO TO 500
+  430 REM 720
+  431 PRINT AT x+1,y;" "
+  432 PRINT AT x,y;"\b": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  433 PRINT AT x,y;"\d": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  434 PRINT AT x,y;"\a": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  435 PRINT AT x,y;"\c": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  436 PRINT AT x,y;"\b": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  437 PRINT AT x,y;"\d": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  438 PRINT AT x,y;"\a": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  439 PRINT AT x,y;"\c": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  440 LET s=900: GO TO 500
+  450 REM 900
+  451 PRINT AT x+1,y;" "
+  452 PRINT AT x,y;"\b": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  453 PRINT AT x,y;"\d": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  454 PRINT AT x,y;"\a": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  455 PRINT AT x,y;"\c": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  456 PRINT AT x,y;"\b": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  457 PRINT AT x,y;"\d": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  458 PRINT AT x,y;"\a": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  459 PRINT AT x,y;"\c": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  460 PRINT AT x,y;"\b": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  461 PRINT AT x,y;"\d": BEEP 0.009,20+INT (RND*r): BORDER INT (RND*7): PAUSE p
+  462 LET s=1080: GO TO 500
+  500 REM Skate down
+  501 IF s=360 THEN GO SUB 700
+  502 IF s=540 THEN GO SUB 710
+  503 IF s=720 THEN GO SUB 720
+  504 IF s=900 THEN GO SUB 730
+  505 IF s=1080 THEN GO SUB 740
+  506 IF s=1360 THEN PAUSE p: GO TO 510
+  510 FOR x=5 TO 18
+  520 PRINT AT x-1,y;" ";AT x,y;"\f"
+  525 BEEP 0.009,j
+  526 LET j=j-1
+  530 NEXT x
+  600 REM Skate left
+  605 PRINT AT x-1,y;" "
+  610 FOR y=25 TO 1 STEP -1
+  620 PRINT AT x,y+1;" ";AT x,y;"\e"
+  621 IF x=19 THEN PRINT AT 19,26; INK 4;"\g"
+  625 BEEP 0.009,x
+  630 NEXT y
+  640 PRINT AT x,y+1;" "
+  641 IF e=1 THEN PAUSE 20: GO TO 200
+  645 IF s=1360 THEN GO SUB 800
+  650 PAUSE 20: GO TO 200
+  700 PRINT AT nx,ny; INK i;"  \::  \::   \:: "
+  701 PRINT AT nx+1,ny; INK i;"  \:: \:: \:: \:: \::"
+  702 PRINT AT nx+2,ny; INK i;"  \::  \::  \:: \:: "
+  703 PRINT AT nx+3,ny; INK i;"  \:: \:: \:: \:: \::"
+  704 PRINT AT nx+4,ny; INK i;"  \::  \::   \:: "
+  706 RETURN 
+  710 PRINT AT nx,ny; INK i;"\::\::\::  \::   \:: "
+  711 PRINT AT nx+1,ny; INK i;"  \:: \::   \:: \::"
+  712 PRINT AT nx+2,ny; INK i;" \::  \::\::  \:: \:: "
+  713 PRINT AT nx+3,ny; INK i;"  \:: \:: \:: \:: \::"
+  714 PRINT AT nx+4,ny; INK i;"\::\::   \::   \:: "
+  715 RETURN 
+  720 PRINT AT nx,ny; INK i;"\::\::\:: \::    \:: "
+  721 PRINT AT nx+1,ny; INK i;"\::   \:: \:: \:: \::"
+  722 PRINT AT nx+2,ny; INK i;"\::\::  \:: \:: \:: \:: "
+  723 PRINT AT nx+3,ny; INK i;"  \:: \::\::\:: \:: \::"
+  724 PRINT AT nx+4,ny; INK i;"\::\::    \::  \:: "
+  725 RETURN 
+  730 PRINT AT nx,ny; INK i;"\::\::\::  \::\::  \::  "
+  731 PRINT AT nx+1,ny; INK i;"  \:: \:: \:: \:: \::"
+  732 PRINT AT nx+2,ny; INK i;"  \::  \::  \:: \::"
+  733 PRINT AT nx+3,ny; INK i;" \::  \::   \:: \::"
+  734 PRINT AT nx+4,ny; INK i;"\::   \::\::\::  \:: "
+  735 RETURN 
+  740 PRINT AT nx,ny; INK i;" \::   \::   \:: "
+  741 PRINT AT nx+1,ny; INK i;"\:: \:: \:: \:: \:: \::"
+  742 PRINT AT nx+2,ny; INK i;" \::\:: \:: \:: \:: \::"
+  743 PRINT AT nx+3,ny; INK i;"  \:: \:: \:: \:: \::"
+  744 PRINT AT nx+4,ny; INK i;"  \::  \::   \:: "
+  745 LET s=1360
+  746 RETURN 
+  800 LET fx=7: LET fy=2: LET i2=1
+  810 PRINT AT fx,fy; INK i2;"\:'\' \:'\: \:  \:  \:'\: \:  \: \:'\' \:'\'.\ :\''"
+  820 PRINT AT fx+1,fy; INK i2;"\:' \: \: \:  \:  \: \: \: \. \: \:' \:.\.'\ '\':"
+  830 PRINT AT fx+2,fy; INK i2;"\:  \:.\: \:.\. \:.\. \:.\: \:.\:.\: \:.\. \: \ :\ .\.:"
+  850 LET fx=7: LET fy=0: LET i=1: LET r=1: LET p=1
+  860 LET a$="\':\' \:.\: \:'\: \:.\ :\ :\.' \'.\: \:'\: \: \: \ :"
+  870 LET b$="\ : \: \: \:'\: \: \':\ :\'. \ .\' \:.\: \:.\: \ ."
+  880 FOR r=3 TO 20
+  890 PRINT AT fx+4,r; PAPER 7; INK i;a$(p)
+  891 BEEP .009,r
+  892 LET i=i+1: LET p=p+1
+  893 IF i=6 THEN LET i=1
+  896 NEXT r
+  897 LET i=3: LET p=1: LET r=1
+  898 FOR r=3 TO 20
+  899 PRINT AT fx+5,r; PAPER 7; INK i;b$(p)
+  900 BEEP .009,r
+  901 LET i=i+1: LET p=p+1
+  902 IF i=6 THEN LET i=1
+  903 NEXT r
+ 1000 PRINT AT fx+7,4; PAPER 0; INK 3;"\:'\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+ 1010 PRINT AT fx+8,4; PAPER 0; INK 3;"\:               \ :"
+ 1020 PRINT AT fx+9,4; PAPER 0; INK 3;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+ 1030 PRINT AT fx+8,5; PAPER 0; INK 5;"\h"
+ 1040 PRINT AT fx+8,7; PAPER 0; INK 7;"\i"
+ 1050 LET z$="SpectrumNez"
+ 1060 LET q=8: LET i=2
+ 1070 FOR l=1 TO 11
+ 1080 PRINT AT fx+8,q; PAPER 0; INK i;z$(l): BEEP 0.009,l
+ 1090 LET q=q+1: LET i=i+1
+ 1100 IF i=7 THEN LET i=4
+ 1110 IF i=6 THEN LET i=2
+ 1120 IF i=3 THEN LET i=6
+ 1130 NEXT l
+ 1135 LET e=1
+ 1140 GO TO 200
+ 1150 REM 900 Followers
+ 1160 REM 
+ 1170 REM \h \iSpectrumNez

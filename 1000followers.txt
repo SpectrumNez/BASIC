@@ -1,0 +1,194 @@
+    1 LET x=1: LET n=1
+    2 LET y=0
+    3 LET l=0
+    4 BORDER 1: PAPER 2: CLS 
+   10 FOR n=1 TO 48
+   11 READ graph
+   12 POKE USR "a"+(n-1),graph
+   13 NEXT n
+   14 DATA 60,66,154,170,188,128,127,0,13,158,223,254,126,62,60,120,1,3,7,15,31,63,127,255,128,192,224,240,248,252,254,255,255,127,63,31,15,7,3,1,255,254,252,248,240,224,192,128
+   50 REM cordpull
+   60 FOR x=0 TO 9
+   65 PRINT AT x,30;"\'."
+   70 NEXT x
+   99 LET x=1: FOR y=0 TO 24
+  100 PRINT AT x+0,y; INK 3;" \.:"; PAPER 0; INK 3;"\''\''\''"
+  110 PRINT AT x+1,y; INK 3;" "; PAPER 0; INK 3;"\:.";"\::"; PAPER 3; INK 0;"\ :"; PAPER 7; INK 0;"\.:"
+  120 PRINT AT x+2,y; INK 0;" \::"; INK 3;"\::\::";"\::"
+  130 PRINT AT x+3,y; INK 0;" \':\::\::\:'"
+  140 PRINT AT x+4,y; INK 3;"  \.:\:."
+  150 PRINT AT x+5,y; INK 5;" \::\::\::\::"
+  160 PRINT AT x+6,y; INK 5;" \::\::\::\::"
+  170 PRINT AT x+7,y; INK 5;" \::\::\::\::"
+  180 PRINT AT x+8,y; INK 5;" \::\::\::\::"
+  190 PRINT AT x+9,y; INK 5;" \::\::\::\::"
+  200 PRINT AT x+10,y; INK 6;" \::\::\::\::"
+  201 IF l=1 THEN GO SUB 400
+  202 IF l=2 THEN GO SUB 700
+  203 IF l=3 THEN GO SUB 500
+  204 IF l=0 THEN GO SUB 590
+  210 LET l=l+1
+  220 IF l=4 THEN LET l=1
+  300 NEXT y
+  301 IF y=25 THEN GO TO 800
+  400 REM Leg Still
+  401 PRINT AT x+11,y;" \:: \::  "
+  402 PRINT AT x+12,y;" \:: \::  "
+  403 PRINT AT x+13,y;" \:: \::  "
+  404 PRINT AT x+14,y;" \:: \::  "
+  405 PRINT AT x+15,y;" \:: \::  "
+  406 PRINT AT x+16,y;" \:: \::  "
+  407 PRINT AT x+17,y; INK 7;" \::\:.\::\:.  "
+  409 PRINT AT x+8,y-1;" ";AT x+9,y-2;" ";AT x+9,y+5;" "
+  410 REM PRINT AT x+5,y+4; BRIGHT 1; INK 5;"\::"
+  420 PRINT AT x+6,y+2; BRIGHT 1; INK 5;"\::"
+  430 PRINT AT x+7,y+1; BRIGHT 1; INK 5;"\::"
+  440 PRINT AT x+8,y; BRIGHT 1; INK 5;"\::"
+  445 PRINT AT x+8,y+5; BRIGHT 1; INK 5;"\::"
+  450 PRINT AT x+9,y-1; INK 3;"\::"
+  455 PRINT AT x+9,y+6; INK 3;"\::"
+  498 BEEP 0.009,1
+  499 RETURN 
+  500 REM Leg 1
+  501 PRINT AT x+11,y-2;"   \:: \::  "
+  502 PRINT AT x+12,y-2;"   \:: \::  "
+  503 PRINT AT x+13,y-2;"    \:: \::  "
+  504 PRINT AT x+14,y-2;"     \::\::  "
+  505 PRINT AT x+15,y-2;"    \::  \::  "
+  506 PRINT AT x+16,y-2;"   \::   \::  "
+  507 PRINT AT x+17,y-2; INK 7;"   \::\:.  \::\:.  "
+  510 REM PRINT AT x+5,y+4; BRIGHT 1; INK 5;"\::"
+  520 PRINT AT x+6,y+4; BRIGHT 1; INK 5;"\::"
+  530 PRINT AT x+7,y+4; BRIGHT 1; INK 5;"\::"
+  540 PRINT AT x+8,y; BRIGHT 1; INK 5;"\::"
+  545 PRINT AT x+8,y+5; BRIGHT 1; INK 5;"\::"
+  550 PRINT AT x+9,y-1; INK 3;"\::"
+  555 PRINT AT x+9,y+6; INK 3;"\::"
+  588 BEEP 0.009,1
+  589 RETURN 
+  590 PRINT AT x+11,y;" \:: \::  "
+  591 PRINT AT x+12,y;" \:: \::  "
+  592 PRINT AT x+13,y;"  \:: \::  "
+  593 PRINT AT x+14,y;"   \::\::  "
+  594 PRINT AT x+15,y;"  \::  \::  "
+  595 PRINT AT x+16,y;" \::   \::  "
+  596 PRINT AT x+17,y; INK 7;" \::\:.  \::\:.  "
+  597 GO SUB 710
+  599 RETURN 
+  700 REM Leg 2
+  701 PRINT AT x+11,y-1;"  \:: \:: "
+  702 PRINT AT x+12,y-1;" \:: \::  "
+  703 PRINT AT x+13,y-1;" \:: \::  "
+  704 PRINT AT x+14,y-1;"\::  \::  "
+  705 PRINT AT x+15,y-1;"\:: \::  "
+  706 PRINT AT x+16,y-1;"\:: \::  "
+  707 PRINT AT x+17,y-1; INK 7;"\::\:.\::\:.  "
+  709 PRINT AT x+8,y-1;" ";AT x+9,y-2;" ";AT x+9,y+5;" "
+  710 REM PRINT AT x+5,y+2; BRIGHT 1; INK 1;"\::"
+  720 PRINT AT x+6,y+2; BRIGHT 1; INK 5;"\::"
+  730 PRINT AT x+7,y+2; BRIGHT 1; INK 5;"\::"
+  740 PRINT AT x+8,y+2; BRIGHT 1; INK 5;"\::"
+  745 PRINT AT x+8,y+2; BRIGHT 1; INK 5;"\::"
+  750 PRINT AT x+9,y+2; INK 3;"\::"
+  798 BEEP 0.009,1
+  799 RETURN 
+  850 PRINT AT x+5,y-1; INK 5;" \::\::\::\::"
+  860 PRINT AT x+6,y-1; INK 5;" \::\::\::\::"
+  870 PRINT AT x+7,y-1; INK 5;" \::\::\::\::"
+  880 PRINT AT x+8,y-1; INK 5;" \::\::\::\::"
+  890 PRINT AT x+9,y-1; INK 5;" \::\::\::\::"
+  909 PRINT AT x+8,y-1;" ";AT x+9,y-2;" ";AT x+9,y+5;" "
+  910 REM PRINT AT x+5,y+2; BRIGHT 1; INK 1;"\::"
+  920 PRINT AT x+6,y+2; BRIGHT 1; INK 5;"\::"
+  930 PRINT AT x+7,y+2; BRIGHT 1; INK 5;"\::"
+  940 PRINT AT x+8,y+2; BRIGHT 1; INK 5;"\::";AT x+8,y+4; BRIGHT 0;" "
+  945 PRINT AT x+8,y+2; BRIGHT 1; INK 5;"\::"
+  950 PRINT AT x+9,y+2; INK 3;"\::"
+  960 PRINT AT x+11,y;" \:: \::  "
+  961 PRINT AT x+12,y;" \:: \::  "
+  962 PRINT AT x+13,y;" \:: \::  "
+  963 PRINT AT x+14,y;" \:: \::  "
+  964 PRINT AT x+15,y;" \:: \::  "
+  965 PRINT AT x+16,y;" \:: \::  "
+  966 PRINT AT x+17,y; INK 7;" \::\:.\::\:.  "
+  970 PAUSE 30
+  980 PRINT AT x+7,y+4; INK 3;"\::"
+  981 PAUSE 30
+  982 PRINT AT x+7,y+4; INK 5; BRIGHT 1;"\::";AT x+7,y+5; BRIGHT 0; INK 3;"\::"
+  983 PAUSE 30
+  984 PRINT AT x+7,y+4; INK 5; BRIGHT 0;" ";AT x+7,y+5; BRIGHT 0; INK 0;"\'."
+  985 PRINT AT x+8,y+4; INK 5; BRIGHT 1;"\::";AT x+8,y+5; BRIGHT 0; INK 3;"\::";AT x+9,y+5; INK 0;"\'."
+  986 BEEP 0.5,15: BEEP 0.5,11
+  987 PAUSE 30
+  988 LET x=0
+  989 PAPER 0
+ 1000 FOR x=0 TO 21
+ 1010 PRINT AT x,0; INK 0;"\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::\::"
+ 1050 NEXT x
+ 1060 PAUSE 30
+ 1070 LET i=1: LET l=1: LET t=4
+ 1100 LET a$=" \c\::  \c\::\::\d \c\::\::\d \c\::\::\d"
+ 1101 LET b$="  \::  \::\f\e\:: \::\f\e\:: \::\f\e\::"
+ 1102 LET c$="  \::  \::  \:: \::  \:: \::  \::"
+ 1103 LET d$="  \::  \::\d\c\:: \::\d\c\:: \::\d\c\::"
+ 1104 LET e$="  \::  \e\::\::\f \e\::\::\f \e\::\::\f"
+ 1110 FOR l=1 TO 19
+ 1120 PRINT AT 1,l+t; INK i;a$(l)
+ 1121 PRINT AT 2,l+t; INK i;b$(l)
+ 1122 PRINT AT 3,l+t; INK i;c$(l)
+ 1123 PRINT AT 4,l+t; INK i;c$(l)
+ 1124 PRINT AT 5,l+t; INK i;d$(l)
+ 1125 PRINT AT 6,l+t; INK i;e$(l)
+ 1126 BEEP 0.009,l+10
+ 1129 LET i=i+1: IF i=8 THEN LET i=1
+ 1130 NEXT l
+ 1139 LET i=5
+ 1140 LET a$="\:'\'' \.'\'. \:  \:  \.'\'. \:  \ : \:'\'' \:'\'. \.'\''"
+ 1141 LET b$="\:'\'  \: \ : \:  \:  \: \ : \: \::\ : \:'\'  \:.\.' \''\'."
+ 1142 LET c$="\:   \'.\.' \:. \:. \'.\.' \'.\::\.' \:.\.. \: \'. \..\.'"
+ 1150 FOR y=25 TO 1 STEP -1
+ 1200 PRINT AT 8,y+3; INK i;a$(y)
+ 1201 PRINT AT 9,y+3; INK i+1;b$(y)
+ 1202 PRINT AT 10,y+3; INK i+2;c$(y)
+ 1203 BEEP 0.009,y
+ 1204 LET i=i-1: IF i=0 THEN LET i=5
+ 1250 NEXT y
+ 1260 LET l=1
+ 1300 PRINT AT 13,9; INK 4; FLASH 1;"THANK YOU !!!"
+ 1400 PRINT AT 15,7; INK 3;"\:'\''\''\''\''\''\''\''\''\''\''\''\''\''\''\':"
+ 1410 PRINT AT 16,7; INK 3;"\:               \ :"
+ 1420 PRINT AT 17,7; INK 3;"\:.\..\..\..\..\..\..\..\..\..\..\..\..\..\..\.:"
+ 1430 PRINT AT 16,8; INK 5;"\b"
+ 1440 PRINT AT 16,10; INK 7;"\a"
+ 1450 LET z$="SpectrumNez"
+ 1460 LET q=11: LET i=2
+ 1470 FOR l=1 TO 11
+ 1480 PRINT AT 16,q; INK i;z$(l): BEEP 0.009,l
+ 1490 LET q=q+1: LET i=i+1
+ 1500 IF i=7 THEN LET i=4
+ 1510 IF i=6 THEN LET i=2
+ 1520 IF i=3 THEN LET i=6
+ 1530 NEXT l
+ 1540 PAUSE 20
+ 1550 LET u=1
+ 2000 LET a$="O6N3e3e3f5f5e5f4eO6N6g"
+ 2001 LET b$="O6N3c3c3c5c5c5c4cO5N6b"
+ 2002 LET c$="O5N3g3g3a5a5g5a4g6g"
+ 2003 PLAY a$,b$,c$
+ 2008 LET u=u+1: IF u=8 THEN LET u=0
+ 2009 BORDER u
+ 2010 LET a$="O7N2g"
+ 2011 LET b$="O6N2g"
+ 2012 LET c$="O5N2g"
+ 2015 PLAY a$,b$,c$
+ 2018 LET u=u+1: IF u=8 THEN LET u=0
+ 2019 BORDER u
+ 2020 LET a$="O7N4g"
+ 2021 LET b$="O6N4g"
+ 2022 LET c$="O5N4g"
+ 2025 PLAY a$,b$,c$
+ 2090 PAUSE 10
+ 2100 GO TO 2000
+ 2200 REM 1000 Followers
+ 2210 REM 
+ 2220 REM \b \aSpectrumNez
